@@ -31,8 +31,7 @@ hero:
   eyebrow: Wooden bicycles
   titleHtml: "Ride close to <em>natural</em> life."
   lead: "Bicycles with frames shaped by hand from wood, in our workshop in Greece. Based in Belgium."
-  primary: Discover the bicycles
-  secondary: Get in touch
+  cta: Get in touch
   imageAlt: "A craftsman in the velowood workshop chooses a bent wooden frame part in front of a wall of templates"
 
 pillars:

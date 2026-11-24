@@ -36,8 +36,8 @@
     {
       "binding": "DB",
       "database_name": "velowood-contact",
-      // Replace with the id printed by `npx wrangler d1 create velowood-contact` (see README).
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      // EU jurisdiction database, created for this site.
+      "database_id": "abd9829e-dadc-4e7f-b374-1310b022281b",
       "migrations_dir": "migrations"
     }
   ],
@@ -55,8 +55,8 @@
   // Daily at 03:17 UTC: delete contact messages older than 180 days.
   "triggers": { "crons": ["17 3 * * *"] },
   "vars": {
-    // Public site key of the Turnstile widget (managed mode). Set the real one before deploying.
-    "TURNSTILE_SITE_KEY": "REPLACE_WITH_TURNSTILE_SITE_KEY",
+    // Public site key of the "velowood contact form" Turnstile widget (managed mode).
+    "TURNSTILE_SITE_KEY": "0x4AAAAAAGRLCPNnTrfLj1wE",
     "TURNSTILE_EXPECTED_HOSTNAMES": "velowood.co,www.velowood.co",
     "MAIL_FROM": "website@forms.velowood.co",
     "MAIL_FROM_NAME": "velowood website",
