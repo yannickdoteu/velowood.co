@@ -1,0 +1,19 @@
+---
+pagination:
+  data: errorPages
+  size: 1
+  alias: page_
+permalink: "{{ page_.lang.meta.path }}error/{{ page_.code }}/index.html"
+layout: base.njk
+noindex: true
+---
+{%- set t = page_.lang -%}
+<section class="vw-section vw-page">
+  <div class="vw-container vw-prose">
+    <p class="vw-eyebrow">{{ t.contact.eyebrow }}</p>
+    <h1 class="vw-heading vw-heading--display">{{ t.error.heading }}</h1>
+    <p class="vw-lead vw-lead--wide">{{ t.error.codes[page_.code] }}</p>
+    <p>{{ t.error.mailtoText }} <a class="vw-link" href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+    <p><a class="vw-btn" href="{{ t | pageUrl('home') }}#contact">{{ t.error.back }}</a></p>
+  </div>
+</section>

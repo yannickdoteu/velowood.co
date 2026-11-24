@@ -1,0 +1,102 @@
+/* velowood site — page-level CSS on top of tokens.css + bundle.css. Tokens only, no hard-coded colours. */
+
+html { scroll-padding-top: calc(var(--header-height) + var(--space-4)); -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
+body { overflow-wrap: break-word; }
+main:focus { outline: none; }
+h1, h2, h3 { text-wrap: balance; hyphens: manual; }
+p { text-wrap: pretty; }
+
+.vw-visually-hidden { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Skip link: hidden until focused. */
+.vw-skip { position: absolute; left: var(--space-4); top: -100px; z-index: 100; padding: var(--space-3) var(--space-4); border-radius: var(--radius-pill); background: var(--walnut); color: var(--on-walnut); font: 600 15px/20px var(--font-sans); text-decoration: none; }
+.vw-skip:focus { top: var(--space-3); outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* ---------- header ---------- */
+.vw-header__logo { display: inline-flex; flex: none; }
+.vw-header__logo img { height: 26px; width: auto; }
+.vw-nav__cta { display: none; }
+.vw-lang__menu[hidden] { display: none; }
+.vw-lang__menu { z-index: 20; }
+.vw-menu-btn { display: none; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--line); border-radius: var(--radius-pill); background: transparent; color: var(--walnut); cursor: pointer; }
+.vw-menu-btn:hover { border-color: var(--walnut); }
+.vw-menu-btn__close { display: none; }
+.vw-menu-btn[aria-expanded="true"] .vw-menu-btn__open { display: none; }
+.vw-menu-btn[aria-expanded="true"] .vw-menu-btn__close { display: inline; }
+.vw-header__cta { white-space: nowrap; }
+
+@media (max-width: 860px) {
+  :root { --header-height: 64px; }
+  .vw-header__inner { gap: var(--space-4); }
+  .js .vw-menu-btn { display: inline-flex; }
+  .js .vw-nav[data-open] { display: flex; flex-direction: column; gap: 0; position: absolute; left: 0; right: 0; top: 100%; margin: 0; padding: var(--space-2) var(--space-4) var(--space-6); background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: var(--shadow-soft); }
+  .js .vw-nav[data-open] a { padding: var(--space-3) 0; border-bottom: 1px solid var(--line); }
+  .js .vw-nav[data-open] a:hover { border-bottom-color: var(--honey); }
+}
+@media (max-width: 520px) {
+  /* The header button moves into the menu on small phones, so long labels never squeeze the bar. */
+  .js .vw-header__cta { display: none; }
+  .js .vw-nav[data-open] .vw-nav__cta { display: block; }
+  .vw-header__actions { gap: var(--space-2); }
+}
+
+/* ---------- hero ---------- */
+.vw-hero__media picture:first-child img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius-lg); }
+.vw-hero .vw-lead { max-width: 36ch; }
+.vw-hero__title { overflow-wrap: normal; hyphens: auto; }
+@media (max-width: 860px) { .vw-hero__media { max-width: 560px; } }
+@media (max-width: 400px) { .vw-hero__title { font-size: 42px; line-height: 46px; } }
+
+/* ---------- sections ---------- */
+.vw-lead--wide { max-width: var(--measure); }
+.vw-lead--flush { margin-top: 0; }
+.vw-rings--quote { --rings-y: 110%; }
+.vw-quote__words p { margin: 0; }
+.vw-workshop__badges { margin: var(--space-6) 0 var(--space-12); }
+picture { display: contents; }
+.vw-photo img { height: auto; }
+.vw-photo-grid .vw-photo:first-child img { aspect-ratio: 4 / 3; }
+.vw-photo-grid .vw-photo:last-child img { aspect-ratio: 1 / 1; }
+
+.vw-hotels { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: start; }
+.vw-hotels > div:last-child { padding-top: var(--space-8); }
+.vw-hotels .vw-heading { margin-bottom: 0; }
+.vw-hotels__action { margin: var(--space-8) 0 0; }
+@media (max-width: 860px) { .vw-hotels { grid-template-columns: 1fr; gap: var(--space-6); } .vw-hotels > div:last-child { padding-top: 0; } }
+
+.vw-section--contact { padding-top: 0; }
+
+/* ---------- contact panel with form ---------- */
+.vw-contact { scroll-margin-top: calc(var(--header-height) + var(--space-4)); }
+.vw-contact:focus { outline: none; }
+.vw-eyebrow--on-walnut { color: var(--honey); }
+.vw-eyebrow--on-walnut::before { background: var(--moss-light); }
+.vw-contact .vw-lead { color: var(--on-walnut-muted); }
+.vw-contact__or { margin: var(--space-8) 0 0; color: var(--on-walnut-muted); font-size: 15px; line-height: 24px; }
+.vw-contact__mail { margin-top: var(--space-2); font-size: 28px; line-height: 36px; word-break: break-word; }
+.vw-contact__meta { margin-top: var(--space-12); }
+.vw-contact :focus-visible { outline-color: var(--focus-on-walnut); }
+@media (max-width: 860px) { .vw-contact__meta { margin-top: var(--space-8); } }
+@media (max-width: 520px) { .vw-contact { padding: var(--space-12) var(--space-4); border-radius: var(--radius-md); } }
+
+/* ---------- footer ---------- */
+.vw-footer__logo { display: inline-flex; }
+.vw-footer__logo img { height: 24px; width: auto; }
+.vw-footer__tagline { max-width: 32ch; margin: var(--space-4) 0 0; }
+.vw-footer__title { margin: 0 0 var(--space-3); color: var(--on-walnut); font: 600 14px/20px var(--font-sans); }
+.vw-footer a[aria-current] { color: var(--honey); }
+.vw-footer a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; }
+.vw-footer a:hover { text-decoration-color: currentColor; }
+@media (max-width: 520px) { .vw-footer__top { grid-template-columns: 1fr; } }
+
+/* ---------- simple pages (privacy, thanks, error, 404) ---------- */
+.vw-page { padding-top: var(--space-16); }
+.vw-prose { max-width: calc(var(--measure) + 2 * var(--space-8)); }
+.vw-prose > p { max-width: var(--measure); }
+.vw-prose__h { margin: var(--space-12) 0 var(--space-2); font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.005em; }
+.vw-prose__meta { margin-top: var(--space-8); color: var(--ink-muted); font-size: 14px; line-height: 22px; }
+.vw-prose .vw-btn { margin-top: var(--space-6); }

@@ -1,0 +1,32 @@
+<!-- @dsCard group="Brand" height=520 width=1200 subtitle="Wordmark, reverse, ring mark, clear space" -->
+<!doctype html>
+<html lang="en">
+<head><link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css"><meta charset="utf-8"><title>Logo — preview</title>
+<style>
+  .lg-grid { display:grid; grid-template-columns: 2fr 2fr 1fr; gap: var(--space-6); padding: var(--space-8); }
+  .lg-tile { border-radius: var(--radius-lg); display:grid; place-items:center; height: 260px; position: relative; }
+  .lg-tile--paper { background: var(--paper); box-shadow: inset 0 0 0 1px var(--line); }
+  .lg-tile--walnut { background: var(--walnut); }
+  .lg-tile--linen { background: var(--linen); }
+  .lg-tile img { height: 56px; width: auto; }
+  .lg-tile .lg-mark { height: 104px; }
+  .lg-label { position:absolute; left: var(--space-6); bottom: var(--space-4); font-size:14px; line-height:22px; color: var(--ink-muted); }
+  .lg-tile--walnut .lg-label { color: var(--on-walnut-muted); }
+  .lg-space { grid-column: 1 / -1; display:flex; align-items:center; gap: var(--space-8); padding: var(--space-6); border-radius: var(--radius-lg); background: var(--linen); }
+  .lg-clear { position:relative; padding: 28px; outline: 1px dashed var(--grain); outline-offset: 0; background: var(--paper); }
+  .lg-clear img { height: 36px; width:auto; }
+  .lg-space p { margin:0; font-size:14px; line-height:22px; color: var(--ink-muted); max-width: 52ch; }
+  .lg-space strong { color: var(--walnut); }
+</style></head>
+<body>
+<div class="lg-grid">
+  <div class="lg-tile lg-tile--paper"><img src="../../assets/Logos/velowood-logo.png" alt="velowood"><span class="lg-label">Primary · on paper, linen, honey-soft</span></div>
+  <div class="lg-tile lg-tile--walnut"><img src="../../assets/Logos/velowood-logo-reverse.png" alt="velowood"><span class="lg-label">Reverse · on walnut, walnut-deep</span></div>
+  <div class="lg-tile lg-tile--linen"><img class="lg-mark" src="../../assets/Logos/velowood-ring-mark.png" alt="velowood tree-ring mark"><span class="lg-label">Ring mark</span></div>
+  <div class="lg-space">
+    <div class="lg-clear"><img src="../../assets/Logos/velowood-logo.png" alt=""></div>
+    <p><strong>Clear space</strong> on every side equals the height of the tree-ring "o". Minimum height 20px on screen. Never recolour, outline, stretch or redraw the wordmark, and never set "velowood" in a typeface in place of the logo.</p>
+  </div>
+</div>
+</body>
+</html>

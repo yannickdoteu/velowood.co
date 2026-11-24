@@ -1,0 +1,22 @@
+---
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ lang.meta.path }}thanks/index.html"
+layout: base.njk
+pageKey: thanks
+noindex: true
+eleventyComputed:
+  pageTitle: "{{ lang.thanks.title }} — velowood"
+  pageDescription: "{{ lang.thanks.text }}"
+---
+{%- set t = lang -%}
+<section class="vw-section vw-page">
+  <div class="vw-container vw-prose">
+    <p class="vw-eyebrow">{{ t.contact.eyebrow }}</p>
+    <h1 class="vw-heading vw-heading--display">{{ t.thanks.heading }}</h1>
+    <p class="vw-lead vw-lead--wide">{{ t.thanks.text }}</p>
+    <p><a class="vw-btn" href="{{ lang | pageUrl('home') }}">{{ t.thanks.back }}</a></p>
+  </div>
+</section>

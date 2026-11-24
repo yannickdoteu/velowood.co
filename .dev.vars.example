@@ -1,0 +1,5 @@
+# Local development only (copy to .dev.vars). These are Cloudflare's documented Turnstile test keys:
+# the site key always passes, and the secret only accepts the dummy token it produces.
+TURNSTILE_SITE_KEY=1x00000000000000000000AA
+TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+TURNSTILE_EXPECTED_HOSTNAMES=

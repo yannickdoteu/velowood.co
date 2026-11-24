@@ -1,0 +1,75 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // One Worker: serves the static site (./dist) as assets and handles POST /api/contact.
+  // Everything here works on the Workers Free plan.
+  "name": "velowood-site",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-11-20",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    // HTML pages and the API go through the Worker (security headers, Turnstile site key).
+    // Static files are served straight from the asset store, so they don't count as Worker requests.
+    "run_worker_first": [
+      "/*",
+      "!/img/*",
+      "!/fonts/*",
+      "!/css/*",
+      "!/js/*",
+      "!/favicon.ico",
+      "!/favicon-32.png",
+      "!/apple-touch-icon.png",
+      "!/og-image.jpg",
+      "!/robots.txt",
+      "!/sitemap.xml"
+    ]
+  },
+  // The apex serves the site; www redirects to it (handled in the Worker).
+  "routes": [
+    { "pattern": "velowood.co", "custom_domain": true },
+    { "pattern": "www.velowood.co", "custom_domain": true }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "velowood-contact",
+      // Replace with the id printed by `npx wrangler d1 create velowood-contact` (see README).
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // About 3 submissions per minute per IP and Cloudflare location (the binding only supports 10 s or 60 s windows).
+  "ratelimits": [
+    { "name": "CONTACT_RATE_LIMITER", "namespace_id": "4201", "simple": { "limit": 3, "period": 60 } }
+  ],
+  // Email Routing: the binding can only send to this verified destination address (free on every plan).
+  "send_email": [
+    { "name": "NOTIFY_EMAIL", "destination_address": "steph@velowood.co" }
+    // Optional confirmation email through Cloudflare Email Sending (Workers Paid). Only add this
+    // together with SEND_CONFIRMATION=true and CONFIRMATION_TRANSPORT=email-service:
+    // { "name": "CONFIRM_EMAIL", "allowed_sender_addresses": ["website@forms.velowood.co"] }
+  ],
+  // Daily at 03:17 UTC: delete contact messages older than 180 days.
+  "triggers": { "crons": ["17 3 * * *"] },
+  "vars": {
+    // Public site key of the Turnstile widget (managed mode). Set the real one before deploying.
+    "TURNSTILE_SITE_KEY": "REPLACE_WITH_TURNSTILE_SITE_KEY",
+    "TURNSTILE_EXPECTED_HOSTNAMES": "velowood.co,www.velowood.co",
+    "MAIL_FROM": "website@forms.velowood.co",
+    "MAIL_FROM_NAME": "velowood website",
+    "MAIL_TO": "steph@velowood.co",
+    // Confirmation email to the visitor: off by default. See README "Optional confirmation email".
+    "SEND_CONFIRMATION": "false",
+    "CONFIRMATION_TRANSPORT": "smtp",
+    "CONFIRM_FROM": "steph@velowood.co",
+    "SMTP_HOST": "smtp.migadu.com",
+    "SMTP_PORT": "465",
+    "SMTP_USER": "steph@velowood.co"
+  },
+  // Secrets (set with `npx wrangler secret put`): TURNSTILE_SECRET_KEY, and SMTP_PASSWORD only if confirmations use SMTP.
+  "observability": { "enabled": true, "head_sampling_rate": 1 },
+  "upload_source_maps": true
+}

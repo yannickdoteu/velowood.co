@@ -1,0 +1,22 @@
+# Static files are served without invoking the Worker (Free plan friendly).
+# HTML pages and /api/* go through the Worker, which adds the full set of security headers.
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+  Access-Control-Allow-Origin: *
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+/*.png
+  X-Content-Type-Options: nosniff
+/*.ico
+  X-Content-Type-Options: nosniff
+/og-image.jpg
+  Cache-Control: public, max-age=86400
+  X-Content-Type-Options: nosniff

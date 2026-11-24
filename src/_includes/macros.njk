@@ -1,0 +1,23 @@
+{# Responsive photo: AVIF + WebP + JPG fallback with real width/height. #}
+{% macro picture(img, alt, sizes, eager=false, cls="") %}
+<picture>
+  <source type="image/avif" srcset="{{ img.avif | srcset }}" sizes="{{ sizes }}">
+  <source type="image/webp" srcset="{{ img.webp | srcset }}" sizes="{{ sizes }}">
+  <img src="{{ img.fallback }}" srcset="{{ img.jpg | srcset }}" sizes="{{ sizes }}" width="{{ img.width }}" height="{{ img.height }}" alt="{{ alt }}"{% if cls %} class="{{ cls }}"{% endif %}{% if eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
+</picture>
+{% endmacro %}
+
+{# Raster logo (TODO(vector-logo): swap for the vector logo when the client sends it). #}
+{% macro logo(img, alt, lazy=false) %}
+<picture>
+  <source type="image/webp" srcset="{{ img.webp | xset }}">
+  <img src="{{ img.png[0].src }}" srcset="{{ img.png | xset }}" width="{{ img.width }}" height="{{ img.height }}" alt="{{ alt }}"{% if lazy %} loading="lazy"{% endif %} decoding="async">
+</picture>
+{% endmacro %}
+
+{% macro arrow() %}<svg class="vw-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 8h10M9 4l4 4-4 4"/></svg>{% endmacro %}
+{% macro chevron() %}<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4.5 6 7.5l3-3"/></svg>{% endmacro %}
+{# Lucide "circle-alert" at the system's 1.75 stroke. #}
+{% macro alertIcon() %}<svg class="vw-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>{% endmacro %}
+{# Lucide "circle-check". #}
+{% macro checkIcon() %}<svg class="vw-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>{% endmacro %}

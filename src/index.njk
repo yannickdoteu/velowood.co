@@ -1,0 +1,99 @@
+---
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ lang.meta.path }}index.html"
+layout: base.njk
+pageKey: home
+eleventyComputed:
+  pageTitle: "{{ lang.site.title }}"
+  pageDescription: "{{ lang.site.description }}"
+---
+{%- from "macros.njk" import picture, arrow -%}
+{%- set t = lang -%}
+<section class="vw-hero" id="bicycles" aria-labelledby="hero-title">
+  <div class="vw-container vw-hero__grid">
+    <div>
+      <p class="vw-eyebrow">{{ t.hero.eyebrow }}</p>
+      <h1 class="vw-hero__title" id="hero-title">{{ t.hero.titleHtml | safe }}</h1>
+      <p class="vw-lead">{{ t.hero.lead }}</p>
+      <div class="vw-hero__actions">
+        <a class="vw-btn" href="#why-wood">{{ t.hero.primary }} {{ arrow() }}</a>
+        <a class="vw-btn vw-btn--secondary" href="#contact">{{ t.hero.secondary }}</a>
+      </div>
+    </div>
+    <div class="vw-hero__media">
+      {{ picture(images.hero, t.hero.imageAlt, "(max-width: 860px) calc(100vw - 32px), 560px", true) }}
+      <picture>
+        <source type="image/webp" srcset="{{ images.ring.webp | join(', ') }}">
+        <img class="vw-hero__ring" src="{{ images.ring.png }}" width="128" height="128" alt="" decoding="async">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="vw-section vw-section--linen" id="why-wood" aria-labelledby="why-wood-title">
+  <div class="vw-container">
+    <p class="vw-eyebrow">{{ t.pillars.eyebrow }}</p>
+    <h2 class="vw-heading" id="why-wood-title">{{ t.pillars.title }}</h2>
+    <p class="vw-lead vw-lead--wide">{{ t.pillars.intro }}</p>
+    <ol class="vw-pillars">
+      {%- for p in t.pillars.items %}
+      <li class="vw-pillar"><span class="vw-pillar__num" aria-hidden="true"></span><h3>{{ p.title }}</h3><p>{{ p.text }}</p></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="vw-section vw-rings vw-rings--quote" aria-labelledby="quote-eyebrow">
+  <figure class="vw-quote">
+    <p class="vw-eyebrow" id="quote-eyebrow">{{ t.quote.eyebrow }}</p>
+    <blockquote class="vw-quote__words"><p>{{ t.quote.wordsHtml | safe }}</p></blockquote>
+    <figcaption class="vw-quote__def">{{ t.quote.definition }}</figcaption>
+  </figure>
+</section>
+
+<section class="vw-section vw-section--linen" id="workshop" aria-labelledby="workshop-title">
+  <div class="vw-container">
+    <p class="vw-eyebrow">{{ t.workshop.eyebrow }}</p>
+    <h2 class="vw-heading" id="workshop-title">{{ t.workshop.title }}</h2>
+    <ul class="vw-badges vw-workshop__badges">
+      <li class="vw-badge vw-badge--cert">{{ t.workshop.badges.fsc }}</li>
+      <li class="vw-badge vw-badge--cert">{{ t.workshop.badges.pefc }}</li>
+      <li class="vw-badge">{{ t.workshop.badges.handmade }}</li>
+      <li class="vw-badge vw-badge--outline">{{ t.workshop.badges.belgium }}</li>
+    </ul>
+    <div class="vw-photo-grid">
+      <figure class="vw-photo">
+        {{ picture(images.workshop, t.workshop.photo1Alt, "(max-width: 720px) calc(100vw - 32px), 660px") }}
+        <figcaption><em>{{ t.workshop.photo1CaptionEm }}</em> {{ t.workshop.photo1Caption }}</figcaption>
+      </figure>
+      <figure class="vw-photo">
+        {{ picture(images.sanding, t.workshop.photo2Alt, "(max-width: 720px) calc(100vw - 32px), 470px") }}
+        <figcaption>{{ t.workshop.photo2Caption }}</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="vw-section" id="hotels" aria-labelledby="hotels-title">
+  <div class="vw-container vw-hotels">
+    <div>
+      <p class="vw-eyebrow">{{ t.hotels.eyebrow }}</p>
+      <h2 class="vw-heading" id="hotels-title">{{ t.hotels.title }}</h2>
+    </div>
+    <div>
+      <!-- PLACEHOLDER COPY -->
+      <p class="vw-lead vw-lead--flush">{{ t.hotels.lead }}</p>
+      <!-- /PLACEHOLDER COPY -->
+      <p class="vw-hotels__action"><a class="vw-btn vw-btn--secondary" href="?role=hotel#contact" data-role-link="hotel">{{ t.hotels.button }}</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="vw-section vw-section--contact" aria-labelledby="contact-title">
+  <div class="vw-container">
+    {% include "partials/contact.njk" %}
+  </div>
+</section>

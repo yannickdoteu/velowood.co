@@ -1,0 +1,79 @@
+{%- from "macros.njk" import arrow, alertIcon, checkIcon -%}
+{%- set f = t.form -%}
+<div id="contact" class="vw-contact vw-contact--form vw-rings" tabindex="-1">
+  <div class="vw-contact__intro">
+    <p class="vw-eyebrow vw-eyebrow--on-walnut">{{ t.contact.eyebrow }}</p>
+    <h2 class="vw-heading" id="contact-title">{{ t.contact.title }}</h2>
+    <p class="vw-lead">{{ t.contact.lead }}</p>
+    <p class="vw-contact__or">{{ t.contact.orEmail }}</p>
+    <a class="vw-contact__mail" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    <div class="vw-contact__meta">
+      <div><strong>{{ t.contact.hqLabel }}</strong>{{ t.contact.hqAddress }}</div>
+      <div><strong>{{ t.contact.workshopLabel }}</strong>{{ t.contact.workshopAddress }}</div>
+    </div>
+  </div>
+
+  <div class="vw-contact__form">
+    {# Live region: stays in the DOM (empty) so the success message is announced when it is filled. #}
+    <div class="vw-success" id="form-success" role="status" aria-live="polite" tabindex="-1"></div>
+    <template id="form-success-tpl"><h3>{{ checkIcon() }}{{ f.successTitle }}</h3><p>{{ f.successText }}</p></template>
+
+    <form class="vw-form vw-form--on-walnut" id="contact-form" action="/api/contact" method="post" aria-label="{{ f.label }}" data-contact-form>
+      <div class="vw-form__status vw-form__status--error" id="form-status" role="alert" hidden></div>
+
+      <div class="vw-form__row">
+        <div class="vw-field">
+          <label class="vw-label" for="cf-name">{{ f.name }}</label>
+          <input class="vw-input" id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="cf-name-error">
+          <p class="vw-field__error" id="cf-name-error" hidden>{{ alertIcon() }}<span></span></p>
+        </div>
+        <div class="vw-field">
+          <label class="vw-label" for="cf-email">{{ f.email }}</label>
+          <input class="vw-input" id="cf-email" name="email" type="email" autocomplete="email" inputmode="email" spellcheck="false" required maxlength="254" aria-describedby="cf-email-hint cf-email-error">
+          <p class="vw-hint" id="cf-email-hint">{{ f.emailHint }}</p>
+          <p class="vw-field__error" id="cf-email-error" hidden>{{ alertIcon() }}<span></span></p>
+        </div>
+      </div>
+
+      <div class="vw-field">
+        <label class="vw-label" for="cf-role">{{ f.role }}</label>
+        <select class="vw-select" id="cf-role" name="role" aria-describedby="cf-role-error">
+          {%- for key, label in f.roles %}
+          <option value="{{ key }}">{{ label }}</option>
+          {%- endfor %}
+        </select>
+        <p class="vw-field__error" id="cf-role-error" hidden>{{ alertIcon() }}<span></span></p>
+      </div>
+
+      <div class="vw-field">
+        <label class="vw-label" for="cf-message">{{ f.message }}</label>
+        <textarea class="vw-textarea" id="cf-message" name="message" rows="6" required minlength="10" maxlength="5000" aria-describedby="cf-message-hint cf-message-error"></textarea>
+        <p class="vw-hint" id="cf-message-hint">{{ f.messageHint }}</p>
+        <p class="vw-field__error" id="cf-message-error" hidden>{{ alertIcon() }}<span></span></p>
+      </div>
+
+      <div class="vw-field">
+        <div class="vw-check">
+          <input id="cf-consent" name="consent" type="checkbox" value="yes" required aria-describedby="cf-consent-error">
+          <label for="cf-consent">{{ f.consentBefore }} <a href="{{ lang | pageUrl('privacy') }}">{{ f.consentLink }}</a></label>
+        </div>
+        <p class="vw-field__error" id="cf-consent-error" hidden>{{ alertIcon() }}<span></span></p>
+      </div>
+
+      {# Honeypot: hidden from people and assistive tech; bots tend to fill it. #}
+      <div class="vw-hp" aria-hidden="true">
+        <label for="cf-website">{{ f.honeypot }}</label>
+        <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <input type="hidden" name="lang" value="{{ t.meta.code }}">
+
+      {# Turnstile renders here once the form scrolls into view (site.js). #}
+      <div class="vw-turnstile" id="cf-turnstile" data-sitekey="{{ site.turnstilePlaceholder }}" data-language="{{ t.meta.hreflang }}"></div>
+
+      <div class="vw-form__actions">
+        <button class="vw-btn vw-btn--light" type="submit" data-label="{{ f.submit }}" data-busy-label="{{ f.sending }}"><span class="vw-spinner" aria-hidden="true"></span><span class="vw-btn__label">{{ f.submit }}</span> {{ arrow() }}</button>
+      </div>
+    </form>
+    <script type="application/json" id="contact-i18n">{{ { errors: f.errors, errorSummary: f.errorSummary, email: site.email } | json | safe }}</script>
+  </div>
+</div>

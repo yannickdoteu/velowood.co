@@ -1,0 +1,189 @@
+# velowood — English strings (source language). Every visible string lives here, never in the templates.
+# To add a language: copy this file to <code>.yml, set meta, translate the values, and rebuild.
+meta:
+  code: en
+  order: 1
+  name: English          # the language in its own name
+  hreflang: en
+  ogLocale: en_GB
+  path: /                # English is the default language at the site root
+
+site:
+  title: "velowood — wooden bicycles, shaped by hand in Greece"
+  description: "velowood makes wooden bicycles. Frames are shaped by hand in our workshop in Greece. Headquartered in Belgium."
+  skip: Skip to content
+  homeLabel: velowood home
+  logoAlt: velowood
+  menu: Menu
+  closeMenu: Close menu
+  languageLabel: "Language: English. Choose a language"
+  ogAlt: "The velowood logo next to a craftsman choosing a bent wooden frame part"
+
+nav:
+  label: Main
+  bicycles: Bicycles
+  whyWood: Why wood
+  workshop: Workshop
+  hotels: Hotels
+  contact: Get in touch
+
+hero:
+  eyebrow: Wooden bicycles
+  titleHtml: "Ride close to <em>natural</em> life."
+  lead: "Bicycles with frames shaped by hand from wood, in our workshop in Greece. Based in Belgium."
+  primary: Discover the bicycles
+  secondary: Get in touch
+  imageAlt: "A craftsman in the velowood workshop chooses a bent wooden frame part in front of a wall of templates"
+
+pillars:
+  eyebrow: Why wood
+  title: Five advantages of a living material
+  intro: "Wood is considered a sustainable material because it is renewable, stores carbon, and can require less energy to produce than materials such as steel or aluminium. However, its environmental benefits depend on how the wood is sourced, processed, and used."
+  items:
+    - title: Renewable resource
+      text: "Trees can regrow after harvesting. When forests are responsibly managed, wood can be produced continuously without permanently depleting the resource."
+    - title: Carbon storage
+      text: "Trees absorb CO₂ during growth and store carbon in their wood. A wooden bicycle frame retains some of that carbon throughout its lifetime."
+    - title: Potentially lower production emissions
+      text: "Processing and shaping wood can require less energy than producing primary aluminium or steel, although adhesives, coatings and manufacturing methods affect the comparison."
+    - title: Durability and repairability
+      text: "Properly engineered and protected wooden frames can be durable. A long-lasting, repairable bicycle reduces the need for replacement."
+    - title: Responsible local sourcing
+      text: "Using locally sourced, FSC- or PEFC-certified timber can support responsible forestry and reduce transport-related emissions."
+
+quote:
+  eyebrow: Biophilia
+  wordsHtml: "<b>bio</b> — life, <b>philia</b> — friendship. To be close to natural life."
+  definition: "Biophilia is the innate human tendency to seek connections with nature and other living things."
+
+workshop:
+  eyebrow: Workshop
+  title: Made by people who know wood.
+  badges:
+    fsc: FSC-certified timber
+    pefc: PEFC-certified timber
+    handmade: Handmade in Greece
+    belgium: Based in Belgium
+  photo1Alt: "Two makers in the velowood workshop check wooden frame parts laid out on the floor"
+  photo1CaptionEm: Shaped by hand.
+  photo1Caption: The workshop in Greece.
+  photo2Alt: "A maker sands a curved wooden frame part by hand"
+  photo2Caption: Every frame part is sanded and finished by hand.
+
+hotels:
+  eyebrow: For hotels
+  title: Bicycles for your guests
+  # PLACEHOLDER COPY — to be replaced by the client
+  lead: "We work with hotels that want to offer their guests wooden bicycles. Tell us about your hotel and we will get back to you."
+  button: Contact us as a hotel
+
+contact:
+  eyebrow: Contact
+  title: For riders, hotels and partners.
+  lead: "Write to us with the form, or by email if you prefer."
+  orEmail: "Or email us directly:"
+  hqLabel: Headquarters
+  hqAddress: "Paradijsstraat 15, 2000 Antwerpen, Belgium"
+  workshopLabel: Workshop
+  workshopAddress: "Terma Afatou, 43100 Karditsa, Greece"
+
+form:
+  label: Contact form
+  required: required
+  optional: optional
+  name: Name
+  email: Email
+  emailHint: We only use it to reply to you.
+  role: "I'm contacting you as"
+  roles:
+    rider: Rider
+    hotel: Hotel
+    partner: Partner or retailer
+    press: Press
+    other: Other
+  message: Message
+  messageHint: "Between 10 and 5000 characters."
+  consentBefore: "I agree that velowood uses my details to answer my message."
+  consentLink: Read the privacy note
+  honeypot: "Leave this field empty"
+  submit: Send message
+  sending: Sending…
+  successTitle: "Thank you — we'll reply within a few days."
+  successText: "Your message has reached us."
+  errorSummary: "Please check the fields marked below."
+  errors:
+    name_required: Enter your name.
+    name_too_long: "Your name can be at most 100 characters."
+    email_required: Enter your email address.
+    email_invalid: "Enter a valid email address, like name@example.com."
+    role_invalid: Choose one of the options.
+    message_required: Enter a message.
+    message_too_short: "Your message needs at least 10 characters."
+    message_too_long: "Your message can be at most 5000 characters."
+    consent_required: Tick the box so we may use your details to answer you.
+    verification_failed: "The spam check did not succeed. Please try again."
+    verification_pending: "The spam check is still loading. Please wait a moment and send again."
+    rate_limited: "You have sent several messages in a short time. Please wait a few minutes and try again."
+    send_failed: "We saved your message, but the notification email could not be sent. To be sure it reaches us, please also email us at"
+    invalid_request: "Something went wrong with the form. Please reload the page and try again."
+    server_error: "Something went wrong on our side. Please try again later, or email us at"
+    network_error: "Your message could not be sent. Check your connection and try again, or email us at"
+
+footer:
+  tagline: "Wooden bicycles, close to natural life."
+  explore: Explore
+  company: Company
+  language: Language
+  privacy: Privacy note
+  copyright: "© velowood"
+  countries: "Belgium · Greece"
+
+privacy:
+  title: Privacy note
+  metaDescription: "What the velowood contact form collects, how long we keep it and how to ask for deletion."
+  back: Back to the home page
+  intro: "This website sets no cookies and uses no analytics. We only process personal data when you send us a message with the contact form."
+  sections:
+    - heading: What the form collects
+      text: "Your name, your email address, the type of contact you choose, your message and the language of the page. We use them only to answer your message."
+    - heading: How long we keep it
+      text: "Your message is stored for 180 days, then deleted automatically. It is also sent by email to our team, who may keep the conversation while it is useful to answer you."
+    - heading: Protection against spam
+      text: "To block automated spam, the form uses Cloudflare Turnstile. It loads only when you reach the form. For this check, Cloudflare processes technical data about your browser and connection, such as your IP address."
+    - heading: Where the data is processed
+      text: "The website and the form run on Cloudflare. Messages are stored in a Cloudflare D1 database and delivered to us by Cloudflare Email Routing."
+    - heading: Your rights
+      text: "You can ask to see, correct or delete your data at any time. Email us at steph@velowood.co and we will reply within a few days."
+  controller: "velowood, Paradijsstraat 15, 2000 Antwerpen, Belgium"
+  controllerLabel: Responsible for your data
+  updated: "Last updated: November 2026"
+
+thanks:
+  title: Thank you
+  heading: "Thank you — we'll reply within a few days."
+  text: "Your message has reached us."
+  back: Back to the home page
+
+error:
+  title: Your message was not sent
+  heading: Your message was not sent
+  back: Back to the form
+  mailtoText: "You can also email us at"
+  codes:
+    invalid: "Some fields were missing or not valid. Please go back and check the form."
+    verification: "The spam check did not succeed. It needs JavaScript in your browser. Please go back and try again, or email us."
+    rate_limited: "You have sent several messages in a short time. Please wait a few minutes and try again."
+    send_failed: "We saved your message, but the notification email could not be sent. To be sure it reaches us, please email us."
+    server: "Something went wrong on our side. Please try again later, or email us."
+
+notFound:
+  title: Page not found
+  text: "This page does not exist. It may have moved."
+  back: Go to the home page
+
+email:
+  confirmSubject: "We received your message — velowood"
+  confirmGreeting: "Hello"
+  confirmBody: "Thank you for your message. We'll reply within a few days."
+  confirmCopyIntro: "Your message:"
+  confirmSignoff: "velowood"

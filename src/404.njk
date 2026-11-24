@@ -1,0 +1,22 @@
+---
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ lang.meta.path }}404.html"
+layout: base.njk
+pageKey: "404"
+noindex: true
+eleventyComputed:
+  pageTitle: "{{ lang.notFound.title }} — velowood"
+  pageDescription: "{{ lang.notFound.text }}"
+---
+{%- set t = lang -%}
+<section class="vw-section vw-page">
+  <div class="vw-container vw-prose">
+    <p class="vw-eyebrow">404</p>
+    <h1 class="vw-heading vw-heading--display">{{ t.notFound.title }}</h1>
+    <p class="vw-lead vw-lead--wide">{{ t.notFound.text }}</p>
+    <p><a class="vw-btn" href="{{ lang | pageUrl('home') }}">{{ t.notFound.back }}</a></p>
+  </div>
+</section>

@@ -1,0 +1,195 @@
+{
+  "hero": {
+    "width": 575,
+    "height": 719,
+    "ratio": 0.8,
+    "avif": [
+      {
+        "w": 400,
+        "src": "/img/hero-400.avif"
+      },
+      {
+        "w": 575,
+        "src": "/img/hero-575.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 400,
+        "src": "/img/hero-400.webp"
+      },
+      {
+        "w": 575,
+        "src": "/img/hero-575.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "src": "/img/hero-400.jpg"
+      },
+      {
+        "w": 575,
+        "src": "/img/hero-575.jpg"
+      }
+    ],
+    "fallback": "/img/hero-575.jpg"
+  },
+  "workshop": {
+    "width": 1121,
+    "height": 841,
+    "ratio": 1.3333333333333333,
+    "avif": [
+      {
+        "w": 560,
+        "src": "/img/workshop-560.avif"
+      },
+      {
+        "w": 840,
+        "src": "/img/workshop-840.avif"
+      },
+      {
+        "w": 1121,
+        "src": "/img/workshop-1121.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 560,
+        "src": "/img/workshop-560.webp"
+      },
+      {
+        "w": 840,
+        "src": "/img/workshop-840.webp"
+      },
+      {
+        "w": 1121,
+        "src": "/img/workshop-1121.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 560,
+        "src": "/img/workshop-560.jpg"
+      },
+      {
+        "w": 840,
+        "src": "/img/workshop-840.jpg"
+      },
+      {
+        "w": 1121,
+        "src": "/img/workshop-1121.jpg"
+      }
+    ],
+    "fallback": "/img/workshop-1121.jpg"
+  },
+  "sanding": {
+    "width": 718,
+    "height": 718,
+    "ratio": 1,
+    "avif": [
+      {
+        "w": 400,
+        "src": "/img/sanding-400.avif"
+      },
+      {
+        "w": 718,
+        "src": "/img/sanding-718.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 400,
+        "src": "/img/sanding-400.webp"
+      },
+      {
+        "w": 718,
+        "src": "/img/sanding-718.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "src": "/img/sanding-400.jpg"
+      },
+      {
+        "w": 718,
+        "src": "/img/sanding-718.jpg"
+      }
+    ],
+    "fallback": "/img/sanding-718.jpg"
+  },
+  "logo": {
+    "height": 26,
+    "width": 120,
+    "png": [
+      {
+        "x": 1,
+        "src": "/img/logo-26.png"
+      },
+      {
+        "x": 2,
+        "src": "/img/logo-52.png"
+      },
+      {
+        "x": 3,
+        "src": "/img/logo-78.png"
+      }
+    ],
+    "webp": [
+      {
+        "x": 1,
+        "src": "/img/logo-26.webp"
+      },
+      {
+        "x": 2,
+        "src": "/img/logo-52.webp"
+      },
+      {
+        "x": 3,
+        "src": "/img/logo-78.webp"
+      }
+    ]
+  },
+  "logo-reverse": {
+    "height": 24,
+    "width": 111,
+    "png": [
+      {
+        "x": 1,
+        "src": "/img/logo-reverse-24.png"
+      },
+      {
+        "x": 2,
+        "src": "/img/logo-reverse-48.png"
+      },
+      {
+        "x": 3,
+        "src": "/img/logo-reverse-72.png"
+      }
+    ],
+    "webp": [
+      {
+        "x": 1,
+        "src": "/img/logo-reverse-24.webp"
+      },
+      {
+        "x": 2,
+        "src": "/img/logo-reverse-48.webp"
+      },
+      {
+        "x": 3,
+        "src": "/img/logo-reverse-72.webp"
+      }
+    ]
+  },
+  "ring": {
+    "width": 128,
+    "height": 128,
+    "webp": [
+      "/img/ring-128.webp 1x",
+      "/img/ring-256.webp 2x"
+    ],
+    "png": "/img/ring-256.png"
+  }
+}

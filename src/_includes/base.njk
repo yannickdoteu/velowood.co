@@ -1,0 +1,72 @@
+{%- from "macros.njk" import logo, chevron -%}
+{%- set t = lang -%}
+{%- set home = lang | pageUrl("home") -%}
+{%- set canonical = site.url + (lang | pageUrl(pageKey)) -%}
+<!doctype html>
+<html lang="{{ t.meta.hreflang }}" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDescription }}">
+{%- if noindex %}
+<meta name="robots" content="noindex">
+{%- else %}
+<link rel="canonical" href="{{ canonical }}">
+{%- for l in languages %}
+<link rel="alternate" hreflang="{{ l.meta.hreflang }}" href="{{ site.url }}{{ l | pageUrl(pageKey) }}">
+{%- endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ languages[0] | pageUrl(pageKey) }}">
+{%- endif %}
+{%- if t.meta.code == "el" %}
+<link rel="preload" href="/fonts/manrope-greek-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/manrope-greek-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+{%- else %}
+<link rel="preload" href="/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/manrope-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+{%- endif %}
+<link rel="stylesheet" href="{{ assets.css }}">
+<script src="{{ assets.js }}" defer></script>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#faf7f2">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="velowood">
+<meta property="og:title" content="{{ pageTitle }}">
+<meta property="og:description" content="{{ pageDescription }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:locale" content="{{ t.meta.ogLocale }}">
+{%- for l in languages %}{% if l.meta.code != t.meta.code %}
+<meta property="og:locale:alternate" content="{{ l.meta.ogLocale }}">
+{%- endif %}{% endfor %}
+<meta property="og:image" content="{{ site.url }}/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ t.site.ogAlt }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ pageTitle }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:image" content="{{ site.url }}/og-image.jpg">
+<meta name="twitter:image:alt" content="{{ t.site.ogAlt }}">
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "velowood",
+  "url": site.url + "/",
+  "logo": site.url + "/img/logo-78.png",
+  "email": site.email,
+  "description": t.site.description,
+  "address": { "@type": "PostalAddress", "streetAddress": "Paradijsstraat 15", "postalCode": "2000", "addressLocality": "Antwerpen", "addressCountry": "BE" },
+  "contactPoint": { "@type": "ContactPoint", "email": site.email, "contactType": "customer support", "availableLanguage": ["en", "nl", "fr", "el"] }
+} | json | safe }}</script>
+</head>
+<body>
+<a class="vw-skip" href="#main">{{ t.site.skip }}</a>
+{% include "partials/header.njk" %}
+<main id="main" tabindex="-1">
+{{ content | safe }}
+</main>
+{% include "partials/footer.njk" %}
+</body>
+</html>

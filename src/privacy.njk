@@ -1,0 +1,28 @@
+---
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ lang.meta.path }}privacy/index.html"
+layout: base.njk
+pageKey: privacy
+eleventyComputed:
+  pageTitle: "{{ lang.privacy.title }} — velowood"
+  pageDescription: "{{ lang.privacy.metaDescription }}"
+---
+{%- set t = lang -%}
+<section class="vw-section vw-page">
+  <div class="vw-container vw-prose">
+    <p class="vw-eyebrow">velowood</p>
+    <h1 class="vw-heading vw-heading--display">{{ t.privacy.title }}</h1>
+    <p class="vw-lead vw-lead--wide">{{ t.privacy.intro }}</p>
+    {%- for s in t.privacy.sections %}
+    <h2 class="vw-prose__h">{{ s.heading }}</h2>
+    <p>{{ s.text }}</p>
+    {%- endfor %}
+    <h2 class="vw-prose__h">{{ t.privacy.controllerLabel }}</h2>
+    <p>{{ t.privacy.controller }} · <a class="vw-link" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <p class="vw-prose__meta">{{ t.privacy.updated }}</p>
+    <p><a class="vw-link" href="{{ lang | pageUrl('home') }}">{{ t.privacy.back }}</a></p>
+  </div>
+</section>

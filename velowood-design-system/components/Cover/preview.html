@@ -1,0 +1,58 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head><link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<meta charset="utf-8">
+<title>velowood</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--paper); color:var(--walnut); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .walnut { fill:var(--walnut); }
+  .honey { fill:var(--honey); }
+  .soft { fill:var(--honey-soft); }
+  .moss { fill:var(--moss); }
+  .blk { rx:var(--radius-lg); }
+  .pill { rx:8px; }
+  .ring { fill:none; stroke:var(--honey); stroke-width:2; }
+  .core { fill:var(--honey); }
+  .words { position:absolute; left:var(--space-8); bottom:var(--space-8); max-width:440px; }
+  .name { margin:0; font-size:88px; line-height:.92; font-weight:500; letter-spacing:-.03em; color:var(--walnut); }
+  .tag { margin:var(--space-3) 0 0 4px; font-size:14px; line-height:20px; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      walnut 344×264 slab bled off the top and right (the logo brown, largest) · honey 128×144 bled off the bottom (the tree-ring tan) · honey-soft 128×112 (the tint) · moss 48×16 pill once (the teeny green) — ≈40% of 960×288
+  arrangement one tall walnut slab with two honey satellites stacked on its left, space-4 gutters, a moss pill tucked under the slab
+  pattern     literal motif, the tree ring of the wordmark's "o": six honey growth rings at a space-4 pitch around a honey core, cut by the walnut slab's edges
+  scales      sides in space-4 multiples (128 = space-32); gutters space-4; ring pitch space-4; corners radius-lg; pill rx half its space-4 height
+-->
+<defs><clipPath id="slab"><rect x="160" y="-28" width="344" height="268" rx="28"/></clipPath></defs>
+<rect class="soft blk" x="16" y="40" width="128" height="112" rx="28"/>
+<rect class="honey blk" x="16" y="168" width="128" height="144" rx="28"/>
+<rect class="walnut blk" x="160" y="-28" width="344" height="268" rx="28"/>
+<g clip-path="url(#slab)">
+  <circle class="core" cx="368" cy="112" r="12"/>
+  <circle class="ring" cx="368" cy="112" r="28"/>
+  <circle class="ring" cx="368" cy="112" r="44"/>
+  <circle class="ring" cx="368" cy="112" r="60"/>
+  <circle class="ring" cx="368" cy="112" r="76"/>
+  <circle class="ring" cx="368" cy="112" r="96"/>
+  <circle class="ring" cx="368" cy="112" r="120"/>
+</g>
+<rect class="moss pill" x="176" y="256" width="48" height="16" rx="8"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">velowood</h1>
+<p class="tag">Wooden bicycles, close to natural life.</p>
+</div>
+</div>
+</body>
+</html>
