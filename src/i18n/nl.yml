@@ -1,0 +1,187 @@
+# velowood — Nederlandse teksten. Zelfde sleutels als en.yml.
+meta:
+  code: nl
+  order: 2
+  name: Nederlands
+  hreflang: nl
+  ogLocale: nl_BE
+  path: /nl/
+
+site:
+  title: "velowood — houten fietsen, met de hand gevormd in Griekenland"
+  description: "velowood maakt houten fietsen. De frames worden met de hand gevormd in onze werkplaats in Griekenland. Hoofdkantoor in België."
+  skip: Naar de inhoud
+  homeLabel: velowood startpagina
+  logoAlt: velowood
+  menu: Menu
+  closeMenu: Menu sluiten
+  languageLabel: "Taal: Nederlands. Kies een taal"
+  ogAlt: "Het velowood-logo naast een vakman die een gebogen houten framedeel kiest"
+
+nav:
+  label: Hoofdmenu
+  bicycles: Fietsen
+  whyWood: Waarom hout
+  workshop: Werkplaats
+  hotels: Hotels
+  contact: Neem contact op
+
+hero:
+  eyebrow: Houten fietsen
+  titleHtml: "Fiets dicht bij het <em>natuurlijke</em> leven."
+  lead: "Fietsen met frames die met de hand uit hout worden gevormd, in onze werkplaats in Griekenland. Gevestigd in België."
+  cta: Neem contact op
+  imageAlt: "Een vakman in de velowood-werkplaats kiest een gebogen houten framedeel voor een wand vol mallen"
+
+pillars:
+  eyebrow: Waarom hout
+  title: Vijf voordelen van een levend materiaal
+  intro: "Hout wordt beschouwd als een duurzaam materiaal omdat het hernieuwbaar is, koolstof opslaat en minder energie kan vragen om te produceren dan materialen zoals staal of aluminium. De milieuvoordelen hangen echter af van hoe het hout wordt gewonnen, verwerkt en gebruikt."
+  items:
+    - title: Hernieuwbare grondstof
+      text: "Bomen kunnen na de oogst opnieuw groeien. Wanneer bossen verantwoord worden beheerd, kan hout continu worden geproduceerd zonder de grondstof blijvend uit te putten."
+    - title: Koolstofopslag
+      text: "Bomen nemen tijdens hun groei CO₂ op en slaan koolstof op in hun hout. Een houten fietsframe houdt een deel van die koolstof vast gedurende zijn hele levensduur."
+    - title: Mogelijk lagere uitstoot bij de productie
+      text: "Hout bewerken en vormen kan minder energie vragen dan de productie van primair aluminium of staal, al hebben lijmen, coatings en productiemethoden invloed op de vergelijking."
+    - title: Duurzaamheid en herstelbaarheid
+      text: "Goed ontworpen en beschermde houten frames kunnen lang meegaan. Een duurzame, herstelbare fiets verkleint de behoefte aan vervanging."
+    - title: Verantwoorde lokale herkomst
+      text: "Lokaal verkregen hout met FSC- of PEFC-certificering kan verantwoord bosbeheer ondersteunen en de uitstoot door transport verminderen."
+
+quote:
+  eyebrow: Biofilie
+  wordsHtml: "<b>bio</b> — leven, <b>filia</b> — vriendschap. Dicht bij het natuurlijke leven zijn."
+  definition: "Biofilie is de aangeboren menselijke neiging om verbinding te zoeken met de natuur en andere levende wezens."
+
+workshop:
+  eyebrow: Werkplaats
+  title: Gemaakt door mensen die hout kennen.
+  badges:
+    fsc: Hout met FSC-certificering
+    pefc: Hout met PEFC-certificering
+    handmade: Met de hand gemaakt in Griekenland
+    belgium: Gevestigd in België
+  photo1Alt: "Twee makers in de velowood-werkplaats controleren houten framedelen die op de vloer liggen"
+  photo1CaptionEm: Met de hand gevormd.
+  photo1Caption: De werkplaats in Griekenland.
+  photo2Alt: "Een maker schuurt met de hand een gebogen houten framedeel"
+  photo2Caption: Elk framedeel wordt met de hand geschuurd en afgewerkt.
+
+hotels:
+  eyebrow: Voor hotels
+  title: Fietsen voor uw gasten
+  # PLACEHOLDER COPY — to be replaced by the client
+  lead: "Wij werken samen met hotels die hun gasten houten fietsen willen aanbieden. Vertel ons over uw hotel en wij nemen contact met u op."
+  button: Neem contact op als hotel
+
+contact:
+  eyebrow: Contact
+  title: Voor rijders, hotels en partners.
+  lead: "Schrijf ons via het formulier, of per e-mail als u dat liever hebt."
+  orEmail: "Of mail ons rechtstreeks:"
+  hqLabel: Hoofdkantoor
+  hqAddress: "Paradijsstraat 15, 2000 Antwerpen, België"
+  workshopLabel: Werkplaats
+  workshopAddress: "Terma Afatou, 43100 Karditsa, Griekenland"
+
+form:
+  label: Contactformulier
+  required: verplicht
+  optional: optioneel
+  name: Naam
+  email: E-mail
+  emailHint: We gebruiken het alleen om u te antwoorden.
+  role: "Ik neem contact op als"
+  roles:
+    rider: Fietser
+    hotel: Hotel
+    partner: Partner of verkoper
+    press: Pers
+    other: Andere
+  message: Bericht
+  messageHint: "Tussen 10 en 5000 tekens."
+  consentBefore: "Ik ga ermee akkoord dat velowood mijn gegevens gebruikt om mijn bericht te beantwoorden."
+  consentLink: Lees de privacyverklaring
+  honeypot: "Laat dit veld leeg"
+  submit: Bericht versturen
+  sending: Bezig met versturen…
+  successTitle: "Bedankt — we nemen binnenkort contact op."
+  successText: "Uw bericht is bij ons aangekomen."
+  errorSummary: "Controleer de hieronder gemarkeerde velden."
+  errors:
+    name_required: Vul uw naam in.
+    name_too_long: "Uw naam mag maximaal 100 tekens bevatten."
+    email_required: Vul uw e-mailadres in.
+    email_invalid: "Vul een geldig e-mailadres in, zoals naam@voorbeeld.be."
+    role_invalid: Kies een van de opties.
+    message_required: Vul een bericht in.
+    message_too_short: "Uw bericht moet minstens 10 tekens bevatten."
+    message_too_long: "Uw bericht mag maximaal 5000 tekens bevatten."
+    consent_required: Vink het vakje aan zodat we uw gegevens mogen gebruiken om u te antwoorden.
+    verification_failed: "De spamcontrole is niet gelukt. Probeer het opnieuw."
+    verification_pending: "De spamcontrole wordt nog geladen. Wacht even en verstuur opnieuw."
+    rate_limited: "U hebt in korte tijd meerdere berichten verstuurd. Wacht een paar minuten en probeer het opnieuw."
+    send_failed: "We hebben uw bericht bewaard, maar de meldingsmail kon niet worden verstuurd. Mail ons voor alle zekerheid ook op"
+    invalid_request: "Er ging iets mis met het formulier. Laad de pagina opnieuw en probeer het nog eens."
+    server_error: "Er ging iets mis aan onze kant. Probeer het later opnieuw, of mail ons op"
+    network_error: "Uw bericht kon niet worden verstuurd. Controleer uw verbinding en probeer het opnieuw, of mail ons op"
+
+footer:
+  tagline: "Houten fietsen, dicht bij het natuurlijke leven."
+  explore: Ontdek
+  company: Bedrijf
+  language: Taal
+  privacy: Privacyverklaring
+  copyright: "© velowood"
+  countries: "België · Griekenland"
+
+privacy:
+  title: Privacyverklaring
+  metaDescription: "Wat het velowood-contactformulier verzamelt, hoe lang we het bewaren en hoe u om verwijdering kunt vragen."
+  back: Terug naar de startpagina
+  intro: "Deze website plaatst geen cookies en gebruikt geen analyse. We verwerken alleen persoonsgegevens wanneer u ons een bericht stuurt via het contactformulier."
+  sections:
+    - heading: Wat het formulier verzamelt
+      text: "Uw naam, uw e-mailadres, het soort contact dat u kiest, uw bericht en de taal van de pagina. We gebruiken ze alleen om uw bericht te beantwoorden."
+    - heading: Hoe lang we het bewaren
+      text: "Uw bericht wordt 180 dagen bewaard en daarna automatisch verwijderd. Het wordt ook per e-mail naar ons team gestuurd, dat het gesprek kan bewaren zolang dat nuttig is om u te antwoorden."
+    - heading: Bescherming tegen spam
+      text: "Om geautomatiseerde spam te blokkeren gebruikt het formulier Cloudflare Turnstile. Het wordt pas geladen wanneer u het formulier bereikt. Voor deze controle verwerkt Cloudflare technische gegevens over uw browser en verbinding, zoals uw IP-adres."
+    - heading: Waar de gegevens worden verwerkt
+      text: "De website en het formulier draaien op Cloudflare. Berichten worden bewaard in een Cloudflare D1-database en bij ons bezorgd via Cloudflare Email Routing."
+    - heading: Uw rechten
+      text: "U kunt op elk moment vragen om uw gegevens in te zien, te verbeteren of te verwijderen. Mail ons op steph@velowood.co en we antwoorden binnen enkele dagen."
+  controller: "velowood, Paradijsstraat 15, 2000 Antwerpen, België"
+  controllerLabel: Verantwoordelijke voor uw gegevens
+  updated: "Laatst bijgewerkt: november 2026"
+
+thanks:
+  title: Bedankt
+  heading: "Bedankt — we nemen binnenkort contact op."
+  text: "Uw bericht is bij ons aangekomen."
+  back: Terug naar de startpagina
+
+error:
+  title: Uw bericht is niet verstuurd
+  heading: Uw bericht is niet verstuurd
+  back: Terug naar het formulier
+  mailtoText: "U kunt ons ook mailen op"
+  codes:
+    invalid: "Sommige velden ontbraken of waren niet geldig. Ga terug en controleer het formulier."
+    verification: "De spamcontrole is niet gelukt. Ze heeft JavaScript in uw browser nodig. Ga terug en probeer het opnieuw, of mail ons."
+    rate_limited: "U hebt in korte tijd meerdere berichten verstuurd. Wacht een paar minuten en probeer het opnieuw."
+    send_failed: "We hebben uw bericht bewaard, maar de meldingsmail kon niet worden verstuurd. Mail ons voor alle zekerheid."
+    server: "Er ging iets mis aan onze kant. Probeer het later opnieuw, of mail ons."
+
+notFound:
+  title: Pagina niet gevonden
+  text: "Deze pagina bestaat niet. Misschien is ze verplaatst."
+  back: Naar de startpagina
+
+email:
+  confirmSubject: "We hebben uw bericht ontvangen — velowood"
+  confirmGreeting: "Hallo"
+  confirmBody: "Bedankt voor uw bericht. We antwoorden binnen enkele dagen."
+  confirmCopyIntro: "Uw bericht:"
+  confirmSignoff: "velowood"

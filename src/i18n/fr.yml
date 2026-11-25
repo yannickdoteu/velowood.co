@@ -1,0 +1,187 @@
+# velowood — textes en français. Mêmes clés que en.yml.
+meta:
+  code: fr
+  order: 3
+  name: Français
+  hreflang: fr
+  ogLocale: fr_BE
+  path: /fr/
+
+site:
+  title: "velowood — vélos en bois, façonnés à la main en Grèce"
+  description: "velowood fabrique des vélos en bois. Les cadres sont façonnés à la main dans notre atelier en Grèce. Siège en Belgique."
+  skip: Aller au contenu
+  homeLabel: Accueil velowood
+  logoAlt: velowood
+  menu: Menu
+  closeMenu: Fermer le menu
+  languageLabel: "Langue : français. Choisir une langue"
+  ogAlt: "Le logo velowood à côté d'un artisan qui choisit une pièce de cadre en bois courbé"
+
+nav:
+  label: Principal
+  bicycles: Vélos
+  whyWood: Pourquoi le bois
+  workshop: Atelier
+  hotels: Hôtels
+  contact: Nous contacter
+
+hero:
+  eyebrow: Vélos en bois
+  titleHtml: "Roulez au plus près de la vie <em>naturelle</em>."
+  lead: "Des vélos dont les cadres sont façonnés à la main dans le bois, dans notre atelier en Grèce. Basés en Belgique."
+  cta: Nous contacter
+  imageAlt: "Un artisan de l'atelier velowood choisit une pièce de cadre en bois courbé devant un mur de gabarits"
+
+pillars:
+  eyebrow: Pourquoi le bois
+  title: Cinq atouts d'un matériau vivant
+  intro: "Le bois est considéré comme un matériau durable parce qu'il est renouvelable, qu'il stocke du carbone et qu'il peut demander moins d'énergie à produire que des matériaux comme l'acier ou l'aluminium. Ses bénéfices environnementaux dépendent toutefois de la manière dont le bois est obtenu, transformé et utilisé."
+  items:
+    - title: Ressource renouvelable
+      text: "Les arbres peuvent repousser après la récolte. Lorsque les forêts sont gérées de façon responsable, le bois peut être produit en continu sans épuiser durablement la ressource."
+    - title: Stockage du carbone
+      text: "Les arbres absorbent du CO₂ en grandissant et stockent du carbone dans leur bois. Un cadre de vélo en bois conserve une partie de ce carbone pendant toute sa durée de vie."
+    - title: Émissions de production potentiellement plus faibles
+      text: "Travailler et façonner le bois peut demander moins d'énergie que produire de l'aluminium primaire ou de l'acier, même si les colles, les finitions et les méthodes de fabrication influencent la comparaison."
+    - title: Durabilité et réparabilité
+      text: "Des cadres en bois bien conçus et protégés peuvent durer longtemps. Un vélo durable et réparable limite le besoin de le remplacer."
+    - title: Approvisionnement local responsable
+      text: "Un bois d'origine locale, certifié FSC ou PEFC, peut soutenir une gestion forestière responsable et réduire les émissions liées au transport."
+
+quote:
+  eyebrow: Biophilie
+  wordsHtml: "<b>bio</b> — vie, <b>philie</b> — amitié. Être proche de la vie naturelle."
+  definition: "La biophilie est la tendance innée de l'être humain à rechercher le lien avec la nature et les autres êtres vivants."
+
+workshop:
+  eyebrow: Atelier
+  title: Fait par des gens qui connaissent le bois.
+  badges:
+    fsc: Bois certifié FSC
+    pefc: Bois certifié PEFC
+    handmade: Fait main en Grèce
+    belgium: Basés en Belgique
+  photo1Alt: "Deux artisans de l'atelier velowood examinent des pièces de cadre en bois posées au sol"
+  photo1CaptionEm: Façonné à la main.
+  photo1Caption: L'atelier en Grèce.
+  photo2Alt: "Un artisan ponce à la main une pièce de cadre en bois courbé"
+  photo2Caption: Chaque pièce de cadre est poncée et finie à la main.
+
+hotels:
+  eyebrow: Pour les hôtels
+  title: Des vélos pour vos clients
+  # PLACEHOLDER COPY — to be replaced by the client
+  lead: "Nous travaillons avec des hôtels qui souhaitent proposer des vélos en bois à leurs clients. Présentez-nous votre hôtel et nous vous répondrons."
+  button: Nous contacter en tant qu'hôtel
+
+contact:
+  eyebrow: Contact
+  title: Pour les cyclistes, les hôtels et les partenaires.
+  lead: "Écrivez-nous avec le formulaire, ou par e-mail si vous préférez."
+  orEmail: "Ou écrivez-nous directement :"
+  hqLabel: Siège
+  hqAddress: "Paradijsstraat 15, 2000 Anvers, Belgique"
+  workshopLabel: Atelier
+  workshopAddress: "Terma Afatou, 43100 Karditsa, Grèce"
+
+form:
+  label: Formulaire de contact
+  required: obligatoire
+  optional: facultatif
+  name: Nom
+  email: E-mail
+  emailHint: Nous l'utilisons uniquement pour vous répondre.
+  role: "Je vous contacte en tant que"
+  roles:
+    rider: Cycliste
+    hotel: Hôtel
+    partner: Partenaire ou revendeur
+    press: Presse
+    other: Autre
+  message: Message
+  messageHint: "Entre 10 et 5000 caractères."
+  consentBefore: "J'accepte que velowood utilise mes données pour répondre à mon message."
+  consentLink: Lire la note de confidentialité
+  honeypot: "Laissez ce champ vide"
+  submit: Envoyer le message
+  sending: Envoi en cours…
+  successTitle: "Merci — nous reviendrons vers vous très vite."
+  successText: "Votre message nous est bien parvenu."
+  errorSummary: "Veuillez vérifier les champs signalés ci-dessous."
+  errors:
+    name_required: Indiquez votre nom.
+    name_too_long: "Votre nom peut compter 100 caractères au maximum."
+    email_required: Indiquez votre adresse e-mail.
+    email_invalid: "Indiquez une adresse e-mail valide, par exemple nom@exemple.be."
+    role_invalid: Choisissez l'une des options.
+    message_required: Écrivez un message.
+    message_too_short: "Votre message doit compter au moins 10 caractères."
+    message_too_long: "Votre message peut compter 5000 caractères au maximum."
+    consent_required: Cochez la case pour que nous puissions utiliser vos données afin de vous répondre.
+    verification_failed: "La vérification anti-spam a échoué. Veuillez réessayer."
+    verification_pending: "La vérification anti-spam est encore en cours de chargement. Patientez un instant, puis renvoyez le message."
+    rate_limited: "Vous avez envoyé plusieurs messages en peu de temps. Patientez quelques minutes, puis réessayez."
+    send_failed: "Nous avons bien enregistré votre message, mais l'e-mail de notification n'a pas pu être envoyé. Pour être sûr qu'il nous parvienne, écrivez-nous aussi à"
+    invalid_request: "Un problème est survenu avec le formulaire. Rechargez la page et réessayez."
+    server_error: "Un problème est survenu de notre côté. Réessayez plus tard, ou écrivez-nous à"
+    network_error: "Votre message n'a pas pu être envoyé. Vérifiez votre connexion et réessayez, ou écrivez-nous à"
+
+footer:
+  tagline: "Des vélos en bois, au plus près de la vie naturelle."
+  explore: Explorer
+  company: Entreprise
+  language: Langue
+  privacy: Note de confidentialité
+  copyright: "© velowood"
+  countries: "Belgique · Grèce"
+
+privacy:
+  title: Note de confidentialité
+  metaDescription: "Ce que collecte le formulaire de contact velowood, combien de temps nous le conservons et comment demander sa suppression."
+  back: Retour à l'accueil
+  intro: "Ce site ne dépose aucun cookie et n'utilise aucun outil d'analyse. Nous ne traitons des données personnelles que lorsque vous nous envoyez un message avec le formulaire de contact."
+  sections:
+    - heading: Ce que collecte le formulaire
+      text: "Votre nom, votre adresse e-mail, le type de contact que vous choisissez, votre message et la langue de la page. Nous les utilisons uniquement pour répondre à votre message."
+    - heading: Combien de temps nous le conservons
+      text: "Votre message est conservé 180 jours, puis supprimé automatiquement. Il est aussi envoyé par e-mail à notre équipe, qui peut garder la conversation tant qu'elle est utile pour vous répondre."
+    - heading: Protection contre le spam
+      text: "Pour bloquer le spam automatisé, le formulaire utilise Cloudflare Turnstile. Il ne se charge que lorsque vous atteignez le formulaire. Pour cette vérification, Cloudflare traite des données techniques sur votre navigateur et votre connexion, comme votre adresse IP."
+    - heading: Où les données sont traitées
+      text: "Le site et le formulaire fonctionnent sur Cloudflare. Les messages sont stockés dans une base de données Cloudflare D1 et nous sont transmis par Cloudflare Email Routing."
+    - heading: Vos droits
+      text: "Vous pouvez demander à tout moment à consulter, corriger ou supprimer vos données. Écrivez-nous à steph@velowood.co et nous répondrons sous quelques jours."
+  controller: "velowood, Paradijsstraat 15, 2000 Anvers, Belgique"
+  controllerLabel: Responsable de vos données
+  updated: "Dernière mise à jour : novembre 2026"
+
+thanks:
+  title: Merci
+  heading: "Merci — nous reviendrons vers vous très vite."
+  text: "Votre message nous est bien parvenu."
+  back: Retour à l'accueil
+
+error:
+  title: Votre message n'a pas été envoyé
+  heading: Votre message n'a pas été envoyé
+  back: Retour au formulaire
+  mailtoText: "Vous pouvez aussi nous écrire à"
+  codes:
+    invalid: "Certains champs étaient manquants ou non valides. Revenez en arrière et vérifiez le formulaire."
+    verification: "La vérification anti-spam a échoué. Elle nécessite JavaScript dans votre navigateur. Revenez en arrière et réessayez, ou écrivez-nous."
+    rate_limited: "Vous avez envoyé plusieurs messages en peu de temps. Patientez quelques minutes, puis réessayez."
+    send_failed: "Nous avons bien enregistré votre message, mais l'e-mail de notification n'a pas pu être envoyé. Pour être sûr qu'il nous parvienne, écrivez-nous."
+    server: "Un problème est survenu de notre côté. Réessayez plus tard, ou écrivez-nous."
+
+notFound:
+  title: Page introuvable
+  text: "Cette page n'existe pas. Elle a peut-être été déplacée."
+  back: Aller à l'accueil
+
+email:
+  confirmSubject: "Nous avons bien reçu votre message — velowood"
+  confirmGreeting: "Bonjour"
+  confirmBody: "Merci pour votre message. Nous vous répondrons sous quelques jours."
+  confirmCopyIntro: "Votre message :"
+  confirmSignoff: "velowood"

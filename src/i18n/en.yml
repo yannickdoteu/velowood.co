@@ -107,7 +107,7 @@ form:
   honeypot: "Leave this field empty"
   submit: Send message
   sending: Sending…
-  successTitle: "Thank you — we'll reply within a few days."
+  successTitle: "Thank you — we'll be in touch soon."
   successText: "Your message has reached us."
   errorSummary: "Please check the fields marked below."
   errors:
@@ -159,7 +159,7 @@ privacy:
 
 thanks:
   title: Thank you
-  heading: "Thank you — we'll reply within a few days."
+  heading: "Thank you — we'll be in touch soon."
   text: "Your message has reached us."
   back: Back to the home page
 

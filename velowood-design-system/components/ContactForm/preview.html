@@ -1,0 +1,75 @@
+<!-- @dsCard group="Sections" height=1500 width=1200 subtitle="Default, error and success states on the walnut panel" -->
+<!doctype html>
+<html lang="en">
+<head><link rel="stylesheet" href="../../tokens.css"><link rel="stylesheet" href="../bundle.css"><meta charset="utf-8"><title>ContactForm — preview</title></head>
+<body>
+<div class="vw-demo vw-stack">
+
+<!-- Default -->
+<section class="vw-contact vw-contact--form vw-rings" aria-labelledby="cf-title-1">
+  <div class="vw-contact__intro">
+    <p class="vw-eyebrow" style="color:var(--honey)">Contact</p>
+    <h2 class="vw-heading" id="cf-title-1">For riders, hotels and partners.</h2>
+    <p class="vw-lead" style="color:var(--on-walnut-muted)">Write to us with the form, or by email if you prefer.</p>
+  </div>
+  <div class="vw-contact__form">
+    <form class="vw-form vw-form--on-walnut" action="#" method="post" aria-label="Contact form" onsubmit="return false">
+      <div class="vw-form__row">
+        <div class="vw-field">
+          <label class="vw-label" for="a-name">Name</label>
+          <input class="vw-input" id="a-name" name="name" type="text" autocomplete="name" required maxlength="100">
+        </div>
+        <div class="vw-field">
+          <label class="vw-label" for="a-email">Email</label>
+          <input class="vw-input" id="a-email" name="email" type="email" autocomplete="email" required aria-describedby="a-email-hint">
+          <p class="vw-hint" id="a-email-hint">We only use it to reply to you.</p>
+        </div>
+      </div>
+      <div class="vw-field">
+        <label class="vw-label" for="a-role">I'm contacting you as</label>
+        <select class="vw-select" id="a-role" name="role"><option>Rider</option><option>Hotel</option><option>Partner or retailer</option><option>Press</option><option>Other</option></select>
+      </div>
+      <div class="vw-field">
+        <label class="vw-label" for="a-message">Message</label>
+        <textarea class="vw-textarea" id="a-message" name="message" rows="6" required minlength="10" maxlength="5000" aria-describedby="a-message-hint"></textarea>
+        <p class="vw-hint" id="a-message-hint">Between 10 and 5000 characters.</p>
+      </div>
+      <div class="vw-field">
+        <div class="vw-check"><input id="a-consent" name="consent" type="checkbox" required><label for="a-consent">I agree that velowood uses my details to answer my message. <a href="#">Read the privacy note</a></label></div>
+      </div>
+      <div class="vw-form__actions"><button class="vw-btn vw-btn--light" type="submit"><span class="vw-btn__label">Send message</span> <svg class="vw-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button></div>
+    </form>
+  </div>
+</section>
+
+<!-- Error state -->
+<section class="vw-contact vw-contact--form vw-rings" aria-label="Error state">
+  <div class="vw-contact__intro"><p class="vw-eyebrow" style="color:var(--honey)">Error state</p></div>
+  <div class="vw-contact__form">
+    <form class="vw-form vw-form--on-walnut" action="#" method="post" aria-label="Contact form" onsubmit="return false" novalidate>
+      <div class="vw-form__status vw-form__status--error" role="alert"><p>Please check the fields marked below.</p></div>
+      <div class="vw-field">
+        <label class="vw-label" for="b-email">Email</label>
+        <input class="vw-input" id="b-email" name="email" type="email" value="ada@" aria-invalid="true" aria-describedby="b-email-error">
+        <p class="vw-field__error" id="b-email-error"><svg class="vw-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg><span>Enter a valid email address, like name@example.com.</span></p>
+      </div>
+      <div class="vw-field">
+        <label class="vw-label" for="b-message">Message</label>
+        <textarea class="vw-textarea" id="b-message" name="message" rows="3" aria-invalid="true" aria-describedby="b-message-error">Hi</textarea>
+        <p class="vw-field__error" id="b-message-error"><svg class="vw-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg><span>Your message needs at least 10 characters.</span></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Success state -->
+<section class="vw-contact vw-contact--form vw-rings" aria-label="Success state">
+  <div class="vw-contact__intro"><p class="vw-eyebrow" style="color:var(--honey)">Success state</p></div>
+  <div class="vw-contact__form">
+    <div class="vw-success" role="status" aria-live="polite"><h3><svg class="vw-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Thank you — we'll be in touch soon.</h3><p>Your message has reached us.</p></div>
+  </div>
+</section>
+
+</div>
+</body>
+</html>

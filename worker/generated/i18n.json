@@ -15,5 +15,56 @@
       "press": "Press",
       "other": "Other"
     }
+  },
+  "nl": {
+    "path": "/nl/",
+    "email": {
+      "confirmSubject": "We hebben uw bericht ontvangen — velowood",
+      "confirmGreeting": "Hallo",
+      "confirmBody": "Bedankt voor uw bericht. We antwoorden binnen enkele dagen.",
+      "confirmCopyIntro": "Uw bericht:",
+      "confirmSignoff": "velowood"
+    },
+    "roles": {
+      "rider": "Fietser",
+      "hotel": "Hotel",
+      "partner": "Partner of verkoper",
+      "press": "Pers",
+      "other": "Andere"
+    }
+  },
+  "fr": {
+    "path": "/fr/",
+    "email": {
+      "confirmSubject": "Nous avons bien reçu votre message — velowood",
+      "confirmGreeting": "Bonjour",
+      "confirmBody": "Merci pour votre message. Nous vous répondrons sous quelques jours.",
+      "confirmCopyIntro": "Votre message :",
+      "confirmSignoff": "velowood"
+    },
+    "roles": {
+      "rider": "Cycliste",
+      "hotel": "Hôtel",
+      "partner": "Partenaire ou revendeur",
+      "press": "Presse",
+      "other": "Autre"
+    }
+  },
+  "el": {
+    "path": "/el/",
+    "email": {
+      "confirmSubject": "Λάβαμε το μήνυμά σας — velowood",
+      "confirmGreeting": "Γεια σας",
+      "confirmBody": "Ευχαριστούμε για το μήνυμά σας. Θα απαντήσουμε μέσα σε λίγες ημέρες.",
+      "confirmCopyIntro": "Το μήνυμά σας:",
+      "confirmSignoff": "velowood"
+    },
+    "roles": {
+      "rider": "Ποδηλάτης",
+      "hotel": "Ξενοδοχείο",
+      "partner": "Συνεργάτης ή μεταπωλητής",
+      "press": "Τύπος",
+      "other": "Άλλο"
+    }
   }
 }
