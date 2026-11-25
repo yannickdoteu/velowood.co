@@ -30,7 +30,7 @@ nav:
 
 hero:
   eyebrow: Wooden bicycles
-  titleHtml: "Ride close to <em>natural</em> life."
+  titleHtml: "Ride <em>biophilic</em>."
   lead: "Bicycles with frames shaped by hand from wood, in our workshop in Greece. Based in Belgium."
   cta: Get in touch
   imageAlt: "Close-up of a wooden bicycle frame with the velowood logo burned into the wood"
@@ -51,10 +51,18 @@ pillars:
     - title: Responsible local sourcing
       text: "Using locally sourced, FSC- or PEFC-certified timber can support responsible forestry and reduce transport-related emissions."
 
+# Dictionary-style entry for the word "biophilic"
 quote:
   eyebrow: Biophilia
-  wordsHtml: "<b>bio</b> — life, <b>philia</b> — friendship. To be close to natural life."
-  definition: "Biophilia is the innate human tendency to seek connections with nature and other living things."
+  word: biophilic
+  syllables: "bio·phil·ic"
+  pronunciation: "/ˌbaɪ.oʊˈfɪl.ɪk/"
+  partOfSpeech: adjective
+  definition: "of, relating to, or characterized by biophilia: the innate human tendency to seek connections with nature and other living things."
+  example: "The biophilic tendency is nevertheless so clearly evinced in daily life and widely distributed as to deserve serious attention."
+  exampleSource: "E. O. Wilson"
+  etymologyLabel: Etymology
+  etymologyHtml: "From Greek <i>bios</i>, “life”, and <i>philia</i>, “friendship, love”, from <i>philos</i>, “dear, loving”. To be close to natural life."
 
 workshop:
   eyebrow: Workshop

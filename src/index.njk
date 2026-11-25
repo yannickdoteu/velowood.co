@@ -46,11 +46,20 @@ eleventyComputed:
 </section>
 
 <section class="vw-section vw-section--quote-small vw-rings vw-rings--quote" aria-labelledby="quote-eyebrow">
-  <figure class="vw-quote">
+  <article class="vw-quote vw-entry">
     <p class="vw-eyebrow" id="quote-eyebrow">{{ t.quote.eyebrow }}</p>
-    <blockquote class="vw-quote__words"><p>{{ t.quote.wordsHtml | safe }}</p></blockquote>
-    <figcaption class="vw-quote__def">{{ t.quote.definition }}</figcaption>
-  </figure>
+    <header class="vw-entry__head">
+      <h2 class="vw-entry__word">{{ t.quote.word }}</h2>
+      <span class="vw-entry__pos">{{ t.quote.partOfSpeech }}</span>
+    </header>
+    <p class="vw-entry__pron"><span>{{ t.quote.syllables }}</span> <span class="vw-entry__ipa">{{ t.quote.pronunciation }}</span></p>
+    <p class="vw-entry__def">{{ t.quote.definition }}</p>
+    <blockquote class="vw-entry__example">
+      <p>{{ t.quote.example }}</p>
+      <footer>{{ t.quote.exampleSource }}</footer>
+    </blockquote>
+    <p class="vw-entry__ety"><b>{{ t.quote.etymologyLabel }}</b> {{ t.quote.etymologyHtml | safe }}</p>
+  </article>
 </section>
 
 <section class="vw-section vw-section--linen" id="workshop" aria-labelledby="workshop-title">

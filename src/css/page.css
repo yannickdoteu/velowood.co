@@ -108,6 +108,24 @@ picture { display: contents; }
 .vw-quote__def { margin-top: var(--space-4); font-size: 15px; line-height: 24px; }
 .vw-section--quote-small { padding: var(--space-8) 0; }
 
+/* dictionary entry */
+.vw-entry { max-width: 640px; margin: 0 auto; text-align: left; }
+.vw-entry .vw-eyebrow { text-align: center; }
+.vw-entry__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--space-3) var(--space-4); margin-top: var(--space-4); }
+.vw-entry__word { margin: 0; font-family: var(--font-serif); font-weight: 600; font-size: 48px; line-height: 52px; letter-spacing: -0.02em; }
+.vw-entry__pos { font-family: var(--font-serif); font-style: italic; font-size: 20px; color: var(--grain); }
+.vw-entry__pron { margin: var(--space-2) 0 0; color: var(--ink-muted); font-size: 15px; line-height: 24px; }
+.vw-entry__ipa { margin-left: var(--space-3); }
+.vw-entry__def { margin: var(--space-4) 0 0; font-size: 18px; line-height: 28px; }
+.vw-entry__def::before { content: ":"; margin-right: 0.4em; font-weight: 700; }
+.vw-entry__example { margin: var(--space-4) 0 0; padding-left: var(--space-4); border-left: 2px solid var(--grain); color: var(--ink-muted); font-family: var(--font-serif); font-style: italic; font-size: 16px; line-height: 26px; }
+.vw-entry__example p { margin: 0; }
+.vw-entry__example footer { margin-top: var(--space-2); font-family: var(--font-sans); font-style: normal; font-size: 14px; }
+.vw-entry__example footer::before { content: "— "; color: var(--grain); }
+.vw-entry__ety { margin: var(--space-6) 0 0; padding-top: var(--space-4); border-top: 1px solid currentColor; border-top-color: color-mix(in srgb, currentColor 18%, transparent); font-size: 15px; line-height: 24px; color: var(--ink-muted); }
+.vw-entry__ety b { margin-right: var(--space-2); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grain); font-weight: 600; }
+@media (max-width: 400px) { .vw-entry__word { font-size: 40px; line-height: 44px; } }
+
 /* ---------- hywood ---------- */
 .vw-hywood { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: start; }
 .vw-hywood > div:last-child { padding-top: var(--space-8); }
