@@ -23,16 +23,11 @@ eleventyComputed:
       </div>
     </div>
     <div class="vw-hero__media">
-      <div class="vw-hero__shot">
-        {{ picture(images.hero, t.hero.imageAlt, "(max-width: 860px) 45vw, 300px", true) }}
-        <picture>
-          <source type="image/webp" srcset="{{ images.ring.webp | join(', ') }}">
-          <img class="vw-hero__ring" src="{{ images.ring.png }}" width="128" height="128" alt="" decoding="async">
-        </picture>
-      </div>
-      <div class="vw-hero__shot vw-hero__shot--bike">
-        {{ picture(images.bike, t.hero.image2Alt, "(max-width: 860px) 45vw, 300px", true) }}
-      </div>
+      {{ picture(images.bike, t.hero.imageAlt, "(max-width: 860px) calc(100vw - 32px), 560px", true) }}
+      <picture>
+        <source type="image/webp" srcset="{{ images.ring.webp | join(', ') }}">
+        <img class="vw-hero__ring" src="{{ images.ring.png }}" width="128" height="128" alt="" decoding="async">
+      </picture>
     </div>
   </div>
 </section>
@@ -70,11 +65,15 @@ eleventyComputed:
     </ul>
     <div class="vw-photo-grid">
       <figure class="vw-photo">
-        {{ picture(images.workshop, t.workshop.photo1Alt, "(max-width: 720px) calc(100vw - 32px), 660px") }}
+        {{ picture(images.craftsman, t.workshop.photo0Alt, "(max-width: 720px) calc(100vw - 32px), 376px") }}
+        <figcaption>{{ t.workshop.photo0Caption }}</figcaption>
+      </figure>
+      <figure class="vw-photo">
+        {{ picture(images.workshop, t.workshop.photo1Alt, "(max-width: 720px) calc(100vw - 32px), 376px") }}
         <figcaption><em>{{ t.workshop.photo1CaptionEm }}</em> {{ t.workshop.photo1Caption }}</figcaption>
       </figure>
       <figure class="vw-photo">
-        {{ picture(images.sanding, t.workshop.photo2Alt, "(max-width: 720px) calc(100vw - 32px), 470px") }}
+        {{ picture(images.sanding, t.workshop.photo2Alt, "(max-width: 720px) calc(100vw - 32px), 376px") }}
         <figcaption>{{ t.workshop.photo2Caption }}</figcaption>
       </figure>
     </div>

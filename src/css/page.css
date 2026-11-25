@@ -44,6 +44,7 @@ p { text-wrap: pretty; }
 }
 
 /* ---------- hero ---------- */
+.vw-hero__media picture:first-child img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius-lg); }
 .vw-hero .vw-lead { max-width: 36ch; }
 .vw-hero__title { overflow-wrap: normal; hyphens: auto; }
 @media (max-width: 860px) { .vw-hero__media { max-width: 560px; } }
@@ -57,8 +58,9 @@ p { text-wrap: pretty; }
 .vw-workshop__badges { margin: var(--space-6) 0 var(--space-12); }
 picture { display: contents; }
 .vw-photo img { height: auto; }
-.vw-photo-grid .vw-photo:first-child img { aspect-ratio: 4 / 3; }
-.vw-photo-grid .vw-photo:last-child img { aspect-ratio: 1 / 1; }
+.vw-photo-grid { grid-template-columns: repeat(3, 1fr); align-items: start; }
+.vw-photo-grid .vw-photo img { aspect-ratio: 4 / 5; }
+@media (max-width: 720px) { .vw-photo-grid { grid-template-columns: 1fr; } }
 
 .vw-section--contact { padding-top: 0; }
 
@@ -99,14 +101,6 @@ picture { display: contents; }
 @media (max-width: 1100px) { .vw-header__tagline { display: none; } }
 @media (max-width: 860px) { .vw-header__tagline { display: block; font-size: 13px; } }
 @media (max-width: 400px) { .vw-header__tagline { display: none; } }
-
-/* ---------- hero: two photos side by side ---------- */
-.vw-hero__grid { grid-template-columns: 1fr 1.2fr; }
-.vw-hero__media { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); align-items: start; }
-.vw-hero__shot { position: relative; }
-.vw-hero__shot--bike { margin-top: var(--space-12); }
-.vw-hero__media picture:first-child img, .vw-hero__shot picture:first-child img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius-lg); }
-@media (max-width: 860px) { .vw-hero__grid { grid-template-columns: 1fr; } .vw-hero__media { max-width: 560px; } .vw-hero__shot--bike { margin-top: var(--space-8); } }
 
 /* ---------- smaller biophilia section ---------- */
 .vw-quote { padding: var(--space-12) var(--space-8); }

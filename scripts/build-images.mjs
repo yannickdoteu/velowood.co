@@ -1,6 +1,6 @@
 // Builds responsive images, logos, favicons and the Open Graph image from velowood-design-system/assets.
 // Output: src/img/** (committed) and src/_data/images.json (manifest used by the templates).
-// concept-frame-render.jpg is an AI render; it is published on request of the client (hero, next to the craftsman photo).
+// concept-frame-render.jpg is an AI render; it is published on request of the client (hero image).
 import sharp from "sharp";
 import pngToIco from "png-to-ico";
 import { mkdir, writeFile } from "node:fs/promises";
@@ -59,10 +59,10 @@ async function logo(name, file, displayHeight) {
   manifest[name] = entry;
 }
 
-await photo("hero", "craft-templates.jpg", 4 / 5, [400, 575]);
-await photo("bike", "concept-frame-render.jpg", 4 / 5, [400, 575]);
-await photo("workshop", "workshop-fitting-graded.jpg", 4 / 3, [560, 840, 1121]);
-await photo("sanding", "craft-sanding.jpg", 1, [400, 718]);
+await photo("bike", "concept-frame-render.jpg", 4 / 5, [400, 575, 819]); // hero
+await photo("craftsman", "craft-templates.jpg", 4 / 5, [400, 575]);
+await photo("workshop", "workshop-fitting-graded.jpg", 4 / 5, [400, 560, 840]);
+await photo("sanding", "craft-sanding.jpg", 4 / 5, [400, 574]);
 await logo("logo", "velowood-logo.png", 40);
 await logo("logo-reverse", "velowood-logo-reverse.png", 32);
 

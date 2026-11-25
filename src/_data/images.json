@@ -1,43 +1,7 @@
 {
-  "hero": {
-    "width": 575,
-    "height": 719,
-    "ratio": 0.8,
-    "avif": [
-      {
-        "w": 400,
-        "src": "/img/hero-400.avif"
-      },
-      {
-        "w": 575,
-        "src": "/img/hero-575.avif"
-      }
-    ],
-    "webp": [
-      {
-        "w": 400,
-        "src": "/img/hero-400.webp"
-      },
-      {
-        "w": 575,
-        "src": "/img/hero-575.webp"
-      }
-    ],
-    "jpg": [
-      {
-        "w": 400,
-        "src": "/img/hero-400.jpg"
-      },
-      {
-        "w": 575,
-        "src": "/img/hero-575.jpg"
-      }
-    ],
-    "fallback": "/img/hero-575.jpg"
-  },
   "bike": {
-    "width": 575,
-    "height": 719,
+    "width": 819,
+    "height": 1024,
     "ratio": 0.8,
     "avif": [
       {
@@ -47,6 +11,10 @@
       {
         "w": 575,
         "src": "/img/bike-575.avif"
+      },
+      {
+        "w": 819,
+        "src": "/img/bike-819.avif"
       }
     ],
     "webp": [
@@ -57,6 +25,10 @@
       {
         "w": 575,
         "src": "/img/bike-575.webp"
+      },
+      {
+        "w": 819,
+        "src": "/img/bike-819.webp"
       }
     ],
     "jpg": [
@@ -67,15 +39,59 @@
       {
         "w": 575,
         "src": "/img/bike-575.jpg"
+      },
+      {
+        "w": 819,
+        "src": "/img/bike-819.jpg"
       }
     ],
-    "fallback": "/img/bike-575.jpg"
+    "fallback": "/img/bike-819.jpg"
+  },
+  "craftsman": {
+    "width": 575,
+    "height": 719,
+    "ratio": 0.8,
+    "avif": [
+      {
+        "w": 400,
+        "src": "/img/craftsman-400.avif"
+      },
+      {
+        "w": 575,
+        "src": "/img/craftsman-575.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 400,
+        "src": "/img/craftsman-400.webp"
+      },
+      {
+        "w": 575,
+        "src": "/img/craftsman-575.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "src": "/img/craftsman-400.jpg"
+      },
+      {
+        "w": 575,
+        "src": "/img/craftsman-575.jpg"
+      }
+    ],
+    "fallback": "/img/craftsman-575.jpg"
   },
   "workshop": {
-    "width": 1121,
-    "height": 841,
-    "ratio": 1.3333333333333333,
+    "width": 840,
+    "height": 1050,
+    "ratio": 0.8,
     "avif": [
+      {
+        "w": 400,
+        "src": "/img/workshop-400.avif"
+      },
       {
         "w": 560,
         "src": "/img/workshop-560.avif"
@@ -83,13 +99,13 @@
       {
         "w": 840,
         "src": "/img/workshop-840.avif"
-      },
-      {
-        "w": 1121,
-        "src": "/img/workshop-1121.avif"
       }
     ],
     "webp": [
+      {
+        "w": 400,
+        "src": "/img/workshop-400.webp"
+      },
       {
         "w": 560,
         "src": "/img/workshop-560.webp"
@@ -97,13 +113,13 @@
       {
         "w": 840,
         "src": "/img/workshop-840.webp"
-      },
-      {
-        "w": 1121,
-        "src": "/img/workshop-1121.webp"
       }
     ],
     "jpg": [
+      {
+        "w": 400,
+        "src": "/img/workshop-400.jpg"
+      },
       {
         "w": 560,
         "src": "/img/workshop-560.jpg"
@@ -111,26 +127,22 @@
       {
         "w": 840,
         "src": "/img/workshop-840.jpg"
-      },
-      {
-        "w": 1121,
-        "src": "/img/workshop-1121.jpg"
       }
     ],
-    "fallback": "/img/workshop-1121.jpg"
+    "fallback": "/img/workshop-840.jpg"
   },
   "sanding": {
-    "width": 718,
+    "width": 574,
     "height": 718,
-    "ratio": 1,
+    "ratio": 0.8,
     "avif": [
       {
         "w": 400,
         "src": "/img/sanding-400.avif"
       },
       {
-        "w": 718,
-        "src": "/img/sanding-718.avif"
+        "w": 574,
+        "src": "/img/sanding-574.avif"
       }
     ],
     "webp": [
@@ -139,8 +151,8 @@
         "src": "/img/sanding-400.webp"
       },
       {
-        "w": 718,
-        "src": "/img/sanding-718.webp"
+        "w": 574,
+        "src": "/img/sanding-574.webp"
       }
     ],
     "jpg": [
@@ -149,11 +161,11 @@
         "src": "/img/sanding-400.jpg"
       },
       {
-        "w": 718,
-        "src": "/img/sanding-718.jpg"
+        "w": 574,
+        "src": "/img/sanding-574.jpg"
       }
     ],
-    "fallback": "/img/sanding-718.jpg"
+    "fallback": "/img/sanding-574.jpg"
   },
   "logo": {
     "height": 40,

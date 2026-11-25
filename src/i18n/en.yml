@@ -33,8 +33,7 @@ hero:
   titleHtml: "Ride close to <em>natural</em> life."
   lead: "Bicycles with frames shaped by hand from wood, in our workshop in Greece. Based in Belgium."
   cta: Get in touch
-  image2Alt: "Close-up of a wooden bicycle frame with the velowood logo burned into the wood"
-  imageAlt: "A craftsman in the velowood workshop chooses a bent wooden frame part in front of a wall of templates"
+  imageAlt: "Close-up of a wooden bicycle frame with the velowood logo burned into the wood"
 
 pillars:
   eyebrow: Why wood
@@ -65,6 +64,8 @@ workshop:
     pefc: PEFC-certified timber
     handmade: Handmade in Greece
     belgium: Based in Belgium
+  photo0Alt: "A craftsman in the velowood workshop chooses a bent wooden frame part in front of a wall of templates"
+  photo0Caption: Choosing the right part.
   photo1Alt: "Two makers in the velowood workshop check wooden frame parts laid out on the floor"
   photo1CaptionEm: Shaped by hand.
   photo1Caption: The workshop in Greece.
