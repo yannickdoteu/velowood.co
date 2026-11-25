@@ -14,6 +14,7 @@ site:
   skip: Skip to content
   homeLabel: velowood home
   logoAlt: velowood
+  tagline: a biophilic bicycle
   menu: Menu
   closeMenu: Close menu
   languageLabel: "Language: English. Choose a language"
@@ -24,7 +25,7 @@ nav:
   bicycles: Bicycles
   whyWood: Why wood
   workshop: Workshop
-  hotels: Hotels
+  hywood: hywood
   contact: Get in touch
 
 hero:
@@ -32,6 +33,7 @@ hero:
   titleHtml: "Ride close to <em>natural</em> life."
   lead: "Bicycles with frames shaped by hand from wood, in our workshop in Greece. Based in Belgium."
   cta: Get in touch
+  image2Alt: "Close-up of a wooden bicycle frame with the velowood logo burned into the wood"
   imageAlt: "A craftsman in the velowood workshop chooses a bent wooden frame part in front of a wall of templates"
 
 pillars:
@@ -69,16 +71,17 @@ workshop:
   photo2Alt: "A maker sands a curved wooden frame part by hand"
   photo2Caption: Every frame part is sanded and finished by hand.
 
-hotels:
-  eyebrow: For hotels
-  title: Bicycles for your guests
+
+hywood:
+  eyebrow: Research and development
+  title: "hywood ©"
   # PLACEHOLDER COPY — to be replaced by the client
-  lead: "We work with hotels that want to offer their guests wooden bicycles. Tell us about your hotel and we will get back to you."
-  button: Contact us as a hotel
+  lead: "hywood is our hydrogen wooden bike. It is still in research and development."
+  status: Under research and development
 
 contact:
   eyebrow: Contact
-  title: For riders, hotels and partners.
+  title: For riders and partners.
   lead: "Write to us with the form, or by email if you prefer."
   orEmail: "Or email us directly:"
   hqLabel: Headquarters

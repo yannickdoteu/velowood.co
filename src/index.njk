@@ -23,11 +23,16 @@ eleventyComputed:
       </div>
     </div>
     <div class="vw-hero__media">
-      {{ picture(images.hero, t.hero.imageAlt, "(max-width: 860px) calc(100vw - 32px), 560px", true) }}
-      <picture>
-        <source type="image/webp" srcset="{{ images.ring.webp | join(', ') }}">
-        <img class="vw-hero__ring" src="{{ images.ring.png }}" width="128" height="128" alt="" decoding="async">
-      </picture>
+      <div class="vw-hero__shot">
+        {{ picture(images.hero, t.hero.imageAlt, "(max-width: 860px) 45vw, 300px", true) }}
+        <picture>
+          <source type="image/webp" srcset="{{ images.ring.webp | join(', ') }}">
+          <img class="vw-hero__ring" src="{{ images.ring.png }}" width="128" height="128" alt="" decoding="async">
+        </picture>
+      </div>
+      <div class="vw-hero__shot vw-hero__shot--bike">
+        {{ picture(images.bike, t.hero.image2Alt, "(max-width: 860px) 45vw, 300px", true) }}
+      </div>
     </div>
   </div>
 </section>
@@ -45,7 +50,7 @@ eleventyComputed:
   </div>
 </section>
 
-<section class="vw-section vw-rings vw-rings--quote" aria-labelledby="quote-eyebrow">
+<section class="vw-section vw-section--quote-small vw-rings vw-rings--quote" aria-labelledby="quote-eyebrow">
   <figure class="vw-quote">
     <p class="vw-eyebrow" id="quote-eyebrow">{{ t.quote.eyebrow }}</p>
     <blockquote class="vw-quote__words"><p>{{ t.quote.wordsHtml | safe }}</p></blockquote>
@@ -76,17 +81,17 @@ eleventyComputed:
   </div>
 </section>
 
-<section class="vw-section" id="hotels" aria-labelledby="hotels-title">
-  <div class="vw-container vw-hotels">
+<section class="vw-section" id="hywood" aria-labelledby="hywood-title">
+  <div class="vw-container vw-hywood">
     <div>
-      <p class="vw-eyebrow">{{ t.hotels.eyebrow }}</p>
-      <h2 class="vw-heading" id="hotels-title">{{ t.hotels.title }}</h2>
+      <p class="vw-eyebrow">{{ t.hywood.eyebrow }}</p>
+      <h2 class="vw-heading" id="hywood-title">{{ t.hywood.title }}</h2>
     </div>
     <div>
       <!-- PLACEHOLDER COPY -->
-      <p class="vw-lead vw-lead--flush">{{ t.hotels.lead }}</p>
+      <p class="vw-lead vw-lead--flush">{{ t.hywood.lead }}</p>
       <!-- /PLACEHOLDER COPY -->
-      <p class="vw-hotels__action"><a class="vw-btn vw-btn--secondary" href="?role=hotel#contact" data-role-link="hotel">{{ t.hotels.button }}</a></p>
+      <ul class="vw-badges vw-hywood__status"><li class="vw-badge vw-badge--outline">{{ t.hywood.status }}</li></ul>
     </div>
   </div>
 </section>

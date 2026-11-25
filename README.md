@@ -1,6 +1,6 @@
 # velowood.co
 
-The velowood website: a one-page, static landing page in English, Dutch, French and Greek, with a contact form. It is built with [Eleventy](https://www.11ty.dev/) and served by a single Cloudflare Worker, which serves `dist/` as static assets and handles `POST /api/contact`. Everything runs on the Workers Free plan.
+The velowood website: a one-page, static landing page in English (Dutch, French and Greek are prepared but switched off), with a contact form. It is built with [Eleventy](https://www.11ty.dev/) and served by a single Cloudflare Worker, which serves `dist/` as static assets and handles `POST /api/contact`. Everything runs on the Workers Free plan.
 
 The look and the copy rules live in [`velowood-design-system/`](velowood-design-system/README.md).
 
@@ -25,7 +25,7 @@ npm run dev                      # builds the site and starts wrangler on http:/
 
 ## Languages
 
-Every visible string lives in `src/i18n/<code>.yml`; templates contain no copy. English (`en.yml`) is the source and is served at `/`. Dutch, French and Greek are at `/nl/`, `/fr/` and `/el/`.
+Every visible string lives in `src/i18n/<code>.yml`; templates contain no copy. English (`en.yml`) is the source and is served at `/`. The Dutch, French and Greek files are parked in `src/i18n-disabled/` until the copy has been reviewed; move one back into `src/i18n/` to switch it on (it then appears at `/nl/`, `/fr/` or `/el/`, and the language menu returns). The menu is hidden while only one language is live. They still need the newer `site.tagline` and `hywood` keys.
 
 To add a language, copy `en.yml` to `<code>.yml`, set `meta` (`code`, `order`, `path`, `hreflang`, `ogLocale`, `name`), translate the values and rebuild. The language menu, `hreflang` links, sitemap, thank-you and error pages, the translated confirmation email and the Worker's redirects all pick it up. All language files must have exactly the same keys. Keep `velowood` lowercase and follow the voice rules in the design system.
 
@@ -41,7 +41,7 @@ Secrets (the Turnstile secret key and so on) are set with `wrangler secret`; `.d
 
 ## Performance and accessibility
 
-Lighthouse (v12, run against the local `wrangler dev` server, 25 November 2026):
+Lighthouse (v12, run against the local `wrangler dev` server, 25 November 2026, **before** the hero, logo and hywood changes of the same day, with Dutch, French and Greek still live; rerun it for current numbers):
 
 | Page | Mobile (perf / a11y / best practices / SEO) | Desktop |
 | --- | --- | --- |

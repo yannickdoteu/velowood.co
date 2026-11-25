@@ -1,6 +1,6 @@
 // Builds responsive images, logos, favicons and the Open Graph image from velowood-design-system/assets.
 // Output: src/img/** (committed) and src/_data/images.json (manifest used by the templates).
-// Never publishes concept-frame-render.jpg (AI render, mood reference only).
+// concept-frame-render.jpg is an AI render; it is published on request of the client (hero, next to the craftsman photo).
 import sharp from "sharp";
 import pngToIco from "png-to-ico";
 import { mkdir, writeFile } from "node:fs/promises";
@@ -60,10 +60,11 @@ async function logo(name, file, displayHeight) {
 }
 
 await photo("hero", "craft-templates.jpg", 4 / 5, [400, 575]);
+await photo("bike", "concept-frame-render.jpg", 4 / 5, [400, 575]);
 await photo("workshop", "workshop-fitting-graded.jpg", 4 / 3, [560, 840, 1121]);
 await photo("sanding", "craft-sanding.jpg", 1, [400, 718]);
-await logo("logo", "velowood-logo.png", 26);
-await logo("logo-reverse", "velowood-logo-reverse.png", 24);
+await logo("logo", "velowood-logo.png", 40);
+await logo("logo-reverse", "velowood-logo-reverse.png", 32);
 
 // Hero disc: the ring mark at 128px (2x = 256px, the source size).
 const ring = path.join(SRC, "Logos", "velowood-ring-mark.png");

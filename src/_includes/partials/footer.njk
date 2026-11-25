@@ -13,16 +13,18 @@
         <li><a href="{{ anchor }}#workshop">{{ t.nav.workshop }}</a></li>
       </ul></nav>
       <nav aria-labelledby="footer-company"><h2 class="vw-footer__title" id="footer-company">{{ t.footer.company }}</h2><ul>
-        <li><a href="{{ anchor }}#hotels">{{ t.nav.hotels }}</a></li>
+        <li><a href="{{ anchor }}#hywood">{{ t.nav.hywood }}</a></li>
         <li><a href="{{ anchor }}#contact">{{ t.nav.contact }}</a></li>
         <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         <li><a href="{{ lang | pageUrl('privacy') }}">{{ t.footer.privacy }}</a></li>
       </ul></nav>
+      {%- if languages | length > 1 %}
       <nav aria-labelledby="footer-lang"><h2 class="vw-footer__title" id="footer-lang">{{ t.footer.language }}</h2><ul>
         {%- for l in languages %}
         <li><a href="{{ l | pageUrl(pageKey) }}" hreflang="{{ l.meta.hreflang }}" lang="{{ l.meta.hreflang }}"{% if l.meta.code == t.meta.code %} aria-current="true"{% endif %}>{{ l.meta.name }}</a></li>
         {%- endfor %}
       </ul></nav>
+      {%- endif %}
     </div>
     <div class="vw-footer__bottom"><span>{{ t.footer.copyright }}</span><span>{{ t.footer.countries }}</span></div>
   </div>

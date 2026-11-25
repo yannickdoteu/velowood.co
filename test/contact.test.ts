@@ -20,7 +20,7 @@ const valid = () => ({
   message: "Hello, we would like to know more about your bicycles.",
   consent: true,
   website: "",
-  lang: "nl",
+  lang: "en",
   turnstileToken: "XXXX.DUMMY.TOKEN.XXXX",
 });
 
@@ -80,7 +80,7 @@ describe("POST /api/contact", () => {
     expect(await res.json()).toEqual({ ok: true });
 
     const row = await env.DB.prepare("SELECT * FROM contact_messages").first<Record<string, string>>();
-    expect(row).toMatchObject({ lang: "nl", role: "hotel", name: "Ada Rider", email: "ada@example.com", email_status: "sent" });
+    expect(row).toMatchObject({ lang: "en", role: "hotel", name: "Ada Rider", email: "ada@example.com", email_status: "sent" });
     expect(row?.created_at).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/);
 
     expect(sent).toHaveLength(1);
@@ -107,12 +107,12 @@ describe("POST /api/contact", () => {
     expect(notificationHtml({ ...valid(), role: "press", lang: "en" } as never, "id", "now")).toContain("Press");
   });
 
-  it("accepts form-encoded posts without JavaScript and redirects to the translated thank-you page", async () => {
+  it("accepts form-encoded posts without JavaScript and redirects to the thank-you page", async () => {
     mockTurnstile(true);
-    const form = new URLSearchParams({ name: "Bo", email: "bo@example.be", role: "rider", message: "A message long enough.", consent: "yes", website: "", lang: "fr", "cf-turnstile-response": "XXXX.DUMMY.TOKEN.XXXX" });
+    const form = new URLSearchParams({ name: "Bo", email: "bo@example.be", role: "rider", message: "A message long enough.", consent: "yes", website: "", lang: "en", "cf-turnstile-response": "XXXX.DUMMY.TOKEN.XXXX" });
     const res = await post(form.toString(), { type: "application/x-www-form-urlencoded", accept: "text/html" });
     expect(res.status).toBe(303);
-    expect(res.headers.get("Location")).toBe(`${ORIGIN}/fr/thanks/`);
+    expect(res.headers.get("Location")).toBe(`${ORIGIN}/thanks/`);
     expect(await rowCount()).toBe(1);
   });
 
@@ -135,11 +135,11 @@ describe("POST /api/contact", () => {
     expect(body.fields).toEqual({ name: "name_too_long", message: "message_too_long" });
   });
 
-  it("redirects no-JS validation errors to the translated error page", async () => {
-    const form = new URLSearchParams({ name: "", email: "", role: "rider", message: "", lang: "el" });
+  it("redirects no-JS validation errors to the error page", async () => {
+    const form = new URLSearchParams({ name: "", email: "", role: "rider", message: "", lang: "en" });
     const res = await post(form.toString(), { type: "application/x-www-form-urlencoded", accept: "text/html" });
     expect(res.status).toBe(303);
-    expect(res.headers.get("Location")).toBe(`${ORIGIN}/el/error/invalid/`);
+    expect(res.headers.get("Location")).toBe(`${ORIGIN}/error/invalid/`);
   });
 
   it("silently succeeds when the honeypot is filled, without storing or sending", async () => {
@@ -232,9 +232,9 @@ describe("site", () => {
 
   it("redirects www to the apex", async () => {
     const ctx = createExecutionContext();
-    const res = await worker.fetch(req("https://www.velowood.co/nl/?x=1"), makeEnv().env, ctx);
+    const res = await worker.fetch(req("https://www.velowood.co/privacy/?x=1"), makeEnv().env, ctx);
     expect(res.status).toBe(301);
-    expect(res.headers.get("Location")).toBe("https://velowood.co/nl/?x=1");
+    expect(res.headers.get("Location")).toBe("https://velowood.co/privacy/?x=1");
   });
 });
 

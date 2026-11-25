@@ -23,7 +23,6 @@ nav:
   bicycles: Fietsen
   whyWood: Waarom hout
   workshop: Werkplaats
-  hotels: Hotels
   contact: Neem contact op
 
 hero:
@@ -68,12 +67,6 @@ workshop:
   photo2Alt: "Een maker schuurt met de hand een gebogen houten framedeel"
   photo2Caption: Elk framedeel wordt met de hand geschuurd en afgewerkt.
 
-hotels:
-  eyebrow: Voor hotels
-  title: Fietsen voor uw gasten
-  # PLACEHOLDER COPY — to be replaced by the client
-  lead: "Wij werken samen met hotels die hun gasten houten fietsen willen aanbieden. Vertel ons over uw hotel en wij nemen contact met u op."
-  button: Neem contact op als hotel
 
 contact:
   eyebrow: Contact

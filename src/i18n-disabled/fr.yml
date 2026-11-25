@@ -23,7 +23,6 @@ nav:
   bicycles: Vélos
   whyWood: Pourquoi le bois
   workshop: Atelier
-  hotels: Hôtels
   contact: Nous contacter
 
 hero:
@@ -68,12 +67,6 @@ workshop:
   photo2Alt: "Un artisan ponce à la main une pièce de cadre en bois courbé"
   photo2Caption: Chaque pièce de cadre est poncée et finie à la main.
 
-hotels:
-  eyebrow: Pour les hôtels
-  title: Des vélos pour vos clients
-  # PLACEHOLDER COPY — to be replaced by the client
-  lead: "Nous travaillons avec des hôtels qui souhaitent proposer des vélos en bois à leurs clients. Présentez-nous votre hôtel et nous vous répondrons."
-  button: Nous contacter en tant qu'hôtel
 
 contact:
   eyebrow: Contact

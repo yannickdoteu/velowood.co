@@ -35,6 +35,42 @@
     ],
     "fallback": "/img/hero-575.jpg"
   },
+  "bike": {
+    "width": 575,
+    "height": 719,
+    "ratio": 0.8,
+    "avif": [
+      {
+        "w": 400,
+        "src": "/img/bike-400.avif"
+      },
+      {
+        "w": 575,
+        "src": "/img/bike-575.avif"
+      }
+    ],
+    "webp": [
+      {
+        "w": 400,
+        "src": "/img/bike-400.webp"
+      },
+      {
+        "w": 575,
+        "src": "/img/bike-575.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "src": "/img/bike-400.jpg"
+      },
+      {
+        "w": 575,
+        "src": "/img/bike-575.jpg"
+      }
+    ],
+    "fallback": "/img/bike-575.jpg"
+  },
   "workshop": {
     "width": 1121,
     "height": 841,
@@ -120,66 +156,66 @@
     "fallback": "/img/sanding-718.jpg"
   },
   "logo": {
-    "height": 26,
-    "width": 120,
+    "height": 40,
+    "width": 185,
     "png": [
       {
         "x": 1,
-        "src": "/img/logo-26.png"
+        "src": "/img/logo-40.png"
       },
       {
         "x": 2,
-        "src": "/img/logo-52.png"
+        "src": "/img/logo-80.png"
       },
       {
         "x": 3,
-        "src": "/img/logo-78.png"
+        "src": "/img/logo-120.png"
       }
     ],
     "webp": [
       {
         "x": 1,
-        "src": "/img/logo-26.webp"
+        "src": "/img/logo-40.webp"
       },
       {
         "x": 2,
-        "src": "/img/logo-52.webp"
+        "src": "/img/logo-80.webp"
       },
       {
         "x": 3,
-        "src": "/img/logo-78.webp"
+        "src": "/img/logo-120.webp"
       }
     ]
   },
   "logo-reverse": {
-    "height": 24,
-    "width": 111,
+    "height": 32,
+    "width": 148,
     "png": [
       {
         "x": 1,
-        "src": "/img/logo-reverse-24.png"
+        "src": "/img/logo-reverse-32.png"
       },
       {
         "x": 2,
-        "src": "/img/logo-reverse-48.png"
+        "src": "/img/logo-reverse-64.png"
       },
       {
         "x": 3,
-        "src": "/img/logo-reverse-72.png"
+        "src": "/img/logo-reverse-96.png"
       }
     ],
     "webp": [
       {
         "x": 1,
-        "src": "/img/logo-reverse-24.webp"
+        "src": "/img/logo-reverse-32.webp"
       },
       {
         "x": 2,
-        "src": "/img/logo-reverse-48.webp"
+        "src": "/img/logo-reverse-64.webp"
       },
       {
         "x": 3,
-        "src": "/img/logo-reverse-72.webp"
+        "src": "/img/logo-reverse-96.webp"
       }
     ]
   },
