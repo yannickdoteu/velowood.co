@@ -152,7 +152,7 @@ privacy:
     - heading: Where the data is processed
       text: "The website and the form run on Cloudflare. Messages are stored in a Cloudflare D1 database and delivered to us by Cloudflare Email Routing."
     - heading: Your rights
-      text: "You can ask to see, correct or delete your data at any time. Email us at steph@velowood.co and we will reply within a few days."
+      text: "You can ask to see, correct or delete your data at any time. Email us at steph@velowood.co and we will be in touch soon."
   controller: "velowood, Paradijsstraat 15, 2000 Antwerpen, Belgium"
   controllerLabel: Responsible for your data
   updated: "Last updated: November 2026"
@@ -183,6 +183,6 @@ notFound:
 email:
   confirmSubject: "We received your message — velowood"
   confirmGreeting: "Hello"
-  confirmBody: "Thank you for your message. We'll reply within a few days."
+  confirmBody: "Thank you for your message. We'll be in touch soon."
   confirmCopyIntro: "Your message:"
   confirmSignoff: "velowood"

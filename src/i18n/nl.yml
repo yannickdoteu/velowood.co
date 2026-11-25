@@ -151,7 +151,7 @@ privacy:
     - heading: Waar de gegevens worden verwerkt
       text: "De website en het formulier draaien op Cloudflare. Berichten worden bewaard in een Cloudflare D1-database en bij ons bezorgd via Cloudflare Email Routing."
     - heading: Uw rechten
-      text: "U kunt op elk moment vragen om uw gegevens in te zien, te verbeteren of te verwijderen. Mail ons op steph@velowood.co en we antwoorden binnen enkele dagen."
+      text: "U kunt op elk moment vragen om uw gegevens in te zien, te verbeteren of te verwijderen. Mail ons op steph@velowood.co en we nemen binnenkort contact met u op."
   controller: "velowood, Paradijsstraat 15, 2000 Antwerpen, België"
   controllerLabel: Verantwoordelijke voor uw gegevens
   updated: "Laatst bijgewerkt: november 2026"
@@ -182,6 +182,6 @@ notFound:
 email:
   confirmSubject: "We hebben uw bericht ontvangen — velowood"
   confirmGreeting: "Hallo"
-  confirmBody: "Bedankt voor uw bericht. We antwoorden binnen enkele dagen."
+  confirmBody: "Bedankt voor uw bericht. We nemen binnenkort contact op."
   confirmCopyIntro: "Uw bericht:"
   confirmSignoff: "velowood"

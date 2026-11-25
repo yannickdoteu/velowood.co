@@ -4,7 +4,7 @@
     "email": {
       "confirmSubject": "We received your message — velowood",
       "confirmGreeting": "Hello",
-      "confirmBody": "Thank you for your message. We'll reply within a few days.",
+      "confirmBody": "Thank you for your message. We'll be in touch soon.",
       "confirmCopyIntro": "Your message:",
       "confirmSignoff": "velowood"
     },
@@ -21,7 +21,7 @@
     "email": {
       "confirmSubject": "We hebben uw bericht ontvangen — velowood",
       "confirmGreeting": "Hallo",
-      "confirmBody": "Bedankt voor uw bericht. We antwoorden binnen enkele dagen.",
+      "confirmBody": "Bedankt voor uw bericht. We nemen binnenkort contact op.",
       "confirmCopyIntro": "Uw bericht:",
       "confirmSignoff": "velowood"
     },
@@ -38,7 +38,7 @@
     "email": {
       "confirmSubject": "Nous avons bien reçu votre message — velowood",
       "confirmGreeting": "Bonjour",
-      "confirmBody": "Merci pour votre message. Nous vous répondrons sous quelques jours.",
+      "confirmBody": "Merci pour votre message. Nous reviendrons vers vous très vite.",
       "confirmCopyIntro": "Votre message :",
       "confirmSignoff": "velowood"
     },
@@ -55,7 +55,7 @@
     "email": {
       "confirmSubject": "Λάβαμε το μήνυμά σας — velowood",
       "confirmGreeting": "Γεια σας",
-      "confirmBody": "Ευχαριστούμε για το μήνυμά σας. Θα απαντήσουμε μέσα σε λίγες ημέρες.",
+      "confirmBody": "Ευχαριστούμε για το μήνυμά σας. Θα επικοινωνήσουμε σύντομα μαζί σας.",
       "confirmCopyIntro": "Το μήνυμά σας:",
       "confirmSignoff": "velowood"
     },
